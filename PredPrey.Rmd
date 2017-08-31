@@ -1,0 +1,122 @@
+---
+title: 'EEB 485 Lab: Predator-Prey Dynamics'
+author: "John Guittar, Pamela Martinez, Doug Jackson, Ed Baskerville, Gyuri Barabas"
+output: pdf_document
+---
+
+## I. Overview
+
+In this lab you will be exploring the Lotka-Volterra predator-prey equations, including biologically more realistic variants that include density-dependent prey growth and predator satiation. You will primarily be analyzing equations by hand today (or in an R Markdown file). You will also explore predator prey dynamics using an interactive Mathematica simulation.
+
+For the simulation portions of the lab, you will need access to Mathematica or a freely available program called Wolfram CDF. You have several options: 1) you can use a campus computer with Mathematica already installed. 2) You can login to [Virtual Sites](http://www.itcs.umich.edu/sites/labs/virtual.php) and use a campus computer and Mathematica remotely. 3) You can download and install [Wolfram CDF](https://www.wolfram.com/cdf-player/) on your personal computer (Warning: it is a large file, about 1 GB). Once you have installed the software, download the file `PredPrey.cdf` from the Predator-Prey directory on Canvas, and open it. Note that the interactive Mathematica simulation uses terms rather than explicit parameters (the Parameters are buried within the code). Try to match the terms with the math as we proceed through the lab. (If you are curious about how the simulation works, you can open the source code `PredPrey_source.nb`.)
+
+## II. Density-Dependent Prey Growth
+
+Recall the basic Lotka-Volterra predator-prey model covered in lecture:
+
+$$
+\begin{aligned}
+\frac{dV}{dt} &= r V -  a P V \\
+\\
+\frac{dP}{dt} &= b V P - m P
+\end{aligned}
+$$
+
+where $V$ and $P$ are the prey ("victim") and predator densities, $r$ is the intrinsic growth rate of the prey, $a$ is the per-capita rate of prey death per predator (the "attack rate"), $b$ is a parameter related to the predation rate and the conversion rate of prey items into predators, and $m$ is the per-capita predator mortality rate.
+
+
+As you'll remember from class, we can solve for the victim and predator isoclines by setting these equations equal to zero and solving for $P$, which will give the predator abundance that results in a victim growth rate of zero, and for $V$, which will give the victim abundance that gives a predator growth rate of zero.
+
+$$
+\begin{aligned}
+\frac{dV}{dt} &= 0 = r V - a V P &\Rightarrow V &= 0 \qquad\text{or}\qquad P = \frac{r}{a} \\
+\\
+\frac{dP}{dt} &= 0 = b V P - m P &\Rightarrow P &= 0 \qquad\text{or}\qquad V = \frac{m}{b}
+\end{aligned}
+$$
+
+As you should be able to see, these are just constants. This means that the victim isocline is simply a horizontal line on the $P$ vs. $V$ phase plot and the predator isocline is simply a vertical line, as you saw in lecture.
+
+However, this basic formulation of the Lotka-Volterra predator-prey equation contains several unrealistic assumptions. To add some biological realism, we can add density dependence to the victim's dynamics using the logistic equation.
+
+Adding density dependence, the model becomes:
+
+$$
+\begin{aligned}
+\frac{dV}{dt} &= r V \left( 1 - \frac{V}{K} \right) - a V P \\
+\\
+\frac{dP}{dt} &= b V P - m P
+\end{aligned}
+$$
+
+where $K$ is the victim's carrying capacity.
+
+### Exercise 1
+
+In this exercise, you will analyze the Lotka-Volterra predator-prey model with prey density dependence.
+
+**a)** What are the units of the parameter $a$?
+
+**b)** Solve $\frac{dP}{dt} = 0$ and $\frac{dV}{dt} = 0$ in order to identify the isoclines for the predator and prey, respectively.
+
+**c)** Plot the isoclines by hand in a phase plane ($V$ vs. $P$). Identify the equilibrium points (there are 3, where $\frac{dV}{dt} = 0$ and $\frac{dP}{dt} = 0$.
+
+**d)** Label the regions of the phase plot with arrows indicating which direction the populations are changing in each of those regions. Label the isoclines themselves as well as their intercepts.
+
+**e)** Based on the direction of the arrows in your figure, label the equilibrium points as being stable or unstable.
+
+**f)** In Mathematica, choose parameter values to demonstrate this scenario. For now, set handling time to zero and competition among predators to zero. Keep theta at 1 to maintain classic logistic growth (i.e. density dependent growth). Note: you can move the initial population values by dragging the yellow crosshairs around. How does changing prey growth rate and predator death rate alter dynamics?
+
+## III. Predator Satiation
+
+Another unrealistic assumption of the basic Lotka-Volterra predator-prey model is that the predation rate is independent of the prey density. Predators cannot, in reality, simply take a constant fraction of the available prey---there's a minimum "handling time" to process each prey item.
+
+$$
+\begin{aligned}
+\frac{dV}{dt} &= r V - \frac{c V P}{g + V} \\
+\\
+\frac{dP}{dt} &= \frac{b V P}{g + V} - m P
+\end{aligned}
+$$
+
+This type of relationship between victim density and predator feeding rate is known as a Type II functional response.
+
+### Exercise 2
+
+**a)** At what prey density does the modified attack rate drop to half its maximum value? (This is known as the "half-saturation constant.")
+
+**b)** Identify the isoclines for the predator and prey, respectively, for the Lotka-Volterra model with predator satiation.
+
+**c)** Plot the isoclines by hand in the phase plane.
+
+**d)** Label all regions of the plot with the direction of arrows in each region.
+
+**e)** Explain what happens to the prey isocline when a Type II functional response is added. What is one example of a biological mechanism leading to a Type II functional response in the predator population.
+
+**f)** Based on the direction of the arrows, label the equilibrium points as being stable or unstable.
+
+**g)** Explore these dynamics in Mathematica.
+
+## IV. Density-Dependent Prey Growth and Predator Satiation
+
+What happens if we add both density-dependent growth of the prey and predator satiation? Combining the changes the we made above, we get:
+
+$$
+\begin{aligned}
+\frac{dV}{dt} &= r V \left(\frac{K - V}{K} \right) - \frac{c V P}{g + V} \\
+\\
+\frac{dP}{dt} &= \frac{b V P}{g + V} - m P
+\end{aligned}
+$$
+
+### Exercise 3
+
+**a)**  Solve for the prey and predator isoclines. Note that the prey isocline is now a parabola. Find expressions for where the isoclines intersect the $V$ and $P$ axes.
+
+**b)** Plot the isoclines in the phase plane, and label all the regions of the plot with arrows.
+
+**c)** Label the stability of the equilibria. Generalizing based on the results from the other two versions of the model, you might suspect that the coexistence equilibrium will be stable depending on where the predator isocline lies relative to the prey isocline. Describe these two scenarios: when do you think the equilibrium be stable, and when will it be unstable?
+
+**d)** If you keep the parameter values constant and only change the starting point of the population, what happens to the long-term dynamics? How does this compare with the behavior of the basic version of the Lotka-Volterra equations, with no density dependence and no predator satiation? 
+
+**e)** In lecture (or at least in the book) we discussed a "paradox" that involves biological control, in which managers might try to reduce the abundance of a pest species, e.g. the prey in the system, by causing the predator isocline to shift to the left. What would it take, biologically speaking, to shift the predator isocline left or right? Explore with simulations what can happen when the predator isocline is reduced in a system that accounts for density dependence in the prey and handling time for the predator. What qualitatively happens to the dynamics? Why? (Hint: to start, set the prey growth rate to 0.1, conversion efficiency to 0.1, predator handling time to 1, predator death rate to 0.05. Then, start varying the appropriate parameters to change the predator isocline.)

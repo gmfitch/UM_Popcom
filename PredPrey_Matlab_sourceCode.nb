@@ -1,0 +1,1559 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     77304,       1549]
+NotebookOptionsPosition[     75762,       1493]
+NotebookOutlinePosition[     76442,       1519]
+CellTagsIndexPosition[     76399,       1516]
+WindowTitle->Predator-Prey Dynamics with Type-Two Functional Response - \
+Source
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Predator-Prey Dynamics with Type-Two Functional Response", "Section",
+ CellFrame->{{0, 0}, {0, 0}},
+ ShowCellBracket->False,
+ FontColor->RGBColor[0.597406, 0, 0.0527047]],
+
+Cell[BoxData[
+ GraphicsBox[RasterBox[CompressedData["
+1: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
+FP/69esnAAAAAAAAAAAAwM74B4thROM=
+   "], {{0, 0}, {1800, 25}}, {0, 255},
+   ColorFunction->RGBColor],
+  ImageSize->{1800, 25},
+  PlotRange->{{0, 1800}, {0, 25}}]], "Section",
+ CellFrame->{{0, 0}, {0, 0}},
+ ShowCellBracket->False],
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "right1", ",", "right2", ",", "sol", ",", "n1max", ",", "n2max", ",", 
+       "n1n2max", ",", "plr2", ",", "gr1", ",", "gr2", ",", "plot1", ",", 
+       "plot2", ",", "startv", ",", "pl3list", ",", "\[IndentingNewLine]", 
+       RowBox[{"colorprey", "=", 
+        RowBox[{"Darker", "[", 
+         RowBox[{"Green", ",", ".5"}], "]"}]}], ",", 
+       RowBox[{"colorpredator", "=", 
+        RowBox[{"RGBColor", "[", 
+         RowBox[{"1", ",", " ", "0", ",", " ", "0"}], "]"}]}], ",", 
+       RowBox[{"plpts", "=", "50"}], ",", 
+       RowBox[{"n10min", "=", "0.00001"}], ",", 
+       RowBox[{"n20min", "=", "0.00001"}], ",", " ", 
+       RowBox[{"n10max", "=", "1.5"}], ",", 
+       RowBox[{"n20max", "=", "1.5"}], ",", 
+       RowBox[{"n10maxfix", "=", "1.1"}], ",", 
+       RowBox[{"n20maxfix", "=", "0.25"}], ",", 
+       RowBox[{"vecplts", "=", "7"}]}], "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"right1", "=", 
+       RowBox[{
+        RowBox[{"r1", " ", 
+         RowBox[{"n1", "[", "t", "]"}], " ", 
+         RowBox[{"(", 
+          RowBox[{"1", "-", 
+           SuperscriptBox[
+            RowBox[{"(", 
+             RowBox[{"n1", "[", "t", "]"}], ")"}], "theta"]}], ")"}]}], "-", 
+        RowBox[{
+         FractionBox[
+          RowBox[{"c", "  ", 
+           RowBox[{"n1", "[", "t", "]"}]}], 
+          RowBox[{"1", "+", 
+           RowBox[{"h", " ", "c", " ", 
+            RowBox[{"n1", "[", "t", "]"}]}]}]], 
+         RowBox[{"n2", "[", "t", "]"}]}]}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"right2", "=", " ", 
+       RowBox[{
+        RowBox[{"n2", "[", "t", "]"}], 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"r2", " ", 
+           FractionBox[
+            RowBox[{"c", " ", 
+             RowBox[{"n1", "[", "t", "]"}], " "}], 
+            RowBox[{"1", "+", 
+             RowBox[{"h", " ", "c", " ", 
+              RowBox[{"n1", "[", "t", "]"}]}]}]]}], "-", "d", " ", "-", 
+          RowBox[{"g", " ", 
+           RowBox[{"n2", "[", "t", "]"}]}]}], ")"}]}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"sol", "=", 
+       RowBox[{"Quiet", "[", 
+        RowBox[{"NDSolve", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{
+             RowBox[{
+              SuperscriptBox["n1", "\[Prime]",
+               MultilineFunction->None], "[", "t", "]"}], "\[Equal]", 
+             "right1"}], ",", 
+            RowBox[{
+             RowBox[{
+              SuperscriptBox["n2", "\[Prime]",
+               MultilineFunction->None], "[", "t", "]"}], "\[Equal]", 
+             "right2"}], ",", 
+            RowBox[{
+             RowBox[{"n1", "[", "0", "]"}], "\[Equal]", "n10"}], " ", ",", 
+            RowBox[{
+             RowBox[{"n2", "[", "0", "]"}], "\[Equal]", "n20"}]}], " ", "}"}],
+           ",", 
+          RowBox[{"{", 
+           RowBox[{"n1", ",", "n2"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"t", ",", "0", ",", "tend"}], "}"}]}], "]"}], "]"}]}], ";",
+       "\[IndentingNewLine]", 
+      RowBox[{"If", "[", 
+       RowBox[{"axes", ",", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"n1max", "=", 
+           RowBox[{"1.2", 
+            RowBox[{"Max", "[", 
+             RowBox[{"Table", "[", 
+              RowBox[{
+               RowBox[{"Quiet", "[", 
+                RowBox[{"Extract", "[", 
+                 RowBox[{
+                  RowBox[{"Evaluate", "[", 
+                   RowBox[{
+                    RowBox[{"n1", "[", "t", "]"}], "/.", "\[InvisibleSpace]", 
+                    "sol"}], "]"}], ",", "1"}], "]"}], "]"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"t", ",", "0", ",", "tend", ",", 
+                 FractionBox["tend", 
+                  RowBox[{" ", 
+                   RowBox[{"10", "plpts"}]}]]}], "}"}]}], "]"}], "]"}]}]}], 
+          ";", "\[IndentingNewLine]", 
+          RowBox[{"n2max", "=", 
+           RowBox[{"1.2", 
+            RowBox[{"Max", "[", 
+             RowBox[{"Table", "[", 
+              RowBox[{
+               RowBox[{"Quiet", "[", 
+                RowBox[{"Extract", "[", 
+                 RowBox[{
+                  RowBox[{"Evaluate", "[", 
+                   RowBox[{
+                    RowBox[{"n2", "[", "t", "]"}], "/.", "\[InvisibleSpace]", 
+                    "sol"}], "]"}], ",", "1"}], "]"}], "]"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"t", ",", "0", ",", "tend", ",", 
+                 FractionBox["tend", 
+                  RowBox[{"10", " ", "plpts"}]]}], "}"}]}], "]"}], "]"}]}]}], 
+          ";", "\[IndentingNewLine]", 
+          RowBox[{"n1n2max", "=", 
+           RowBox[{"Max", "[", 
+            RowBox[{"n1max", ",", "n2max"}], "]"}]}]}], ")"}], ",", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"n1max", "=", "n10maxfix"}], ";", 
+          RowBox[{"n2max", "=", "n20maxfix"}], ";", 
+          RowBox[{"n1n2max", "=", "n20maxfix"}]}], ")"}]}], "]"}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"gr1", "=", 
+       RowBox[{"ContourPlot", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"r1", " ", 
+           RowBox[{"(", 
+            RowBox[{"1", "-", 
+             SuperscriptBox["x", "theta"]}], ")"}]}], "\[Equal]", 
+          FractionBox[
+           RowBox[{"c", " ", "y", " "}], 
+           RowBox[{"1", "+", 
+            RowBox[{"h", " ", "c", " ", "x"}]}]]}], ",", 
+         RowBox[{"{", 
+          RowBox[{"x", ",", "0", ",", "n1max"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"y", ",", "0", ",", "n2max"}], "}"}], ",", 
+         RowBox[{"ContourStyle", "\[Rule]", "colorprey"}], ",", 
+         RowBox[{"PlotPoints", "\[Rule]", "plpts"}]}], "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"gr2", "=", 
+       RowBox[{"ContourPlot", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{"r2", "  ", 
+            FractionBox[
+             RowBox[{"x", " ", "c"}], 
+             RowBox[{"1", "+", 
+              RowBox[{"h", " ", "c", " ", "x"}]}]]}], "-", "d"}], " ", 
+          "\[Equal]", 
+          RowBox[{"g", " ", "y"}]}], " ", ",", 
+         RowBox[{"{", 
+          RowBox[{"x", ",", "0", ",", "n1max"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"y", ",", "0", ",", "n2max"}], "}"}], ",", 
+         RowBox[{"ContourStyle", "\[Rule]", "colorpredator"}], ",", 
+         RowBox[{"PlotPoints", "\[Rule]", "plpts"}]}], "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"plot1", "=", 
+       RowBox[{"Plot", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"Tooltip", "[", 
+            RowBox[{
+             RowBox[{"Evaluate", "[", 
+              RowBox[{
+               RowBox[{"n1", "[", "t", "]"}], "/.", "\[InvisibleSpace]", 
+               "sol"}], "]"}], ",", "\"\<prey\>\""}], "]"}], ",", 
+           RowBox[{"Tooltip", "[", 
+            RowBox[{
+             RowBox[{"Evaluate", "[", 
+              RowBox[{
+               RowBox[{"n2", "[", "t", "]"}], "/.", "\[InvisibleSpace]", 
+               "sol"}], "]"}], ",", "\"\<predator\>\""}], "]"}]}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"t", ",", "0", ",", "tend"}], "}"}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{"PlotRange", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"-", "0.05"}], " ", "tend"}], ",", "tend"}], "}"}], 
+            ",", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"-", "0.05"}], " ", "n1n2max"}], ",", "n1n2max"}], 
+             "}"}]}], "}"}]}], ",", 
+         RowBox[{"AxesOrigin", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"-", "0.05"}], " ", "tend"}], ",", 
+            RowBox[{
+             RowBox[{"-", "0.05"}], " ", "n1n2max"}]}], "}"}]}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{"PlotStyle", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{"colorprey", ",", "colorpredator"}], "}"}]}], ",", 
+         RowBox[{"AxesLabel", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{"\"\<time\>\"", ",", 
+            RowBox[{
+             RowBox[{"Style", "[", 
+              RowBox[{"pe", ",", "colorpredator"}], "]"}], " ", 
+             RowBox[{"Style", "[", " ", 
+              RowBox[{"py", ",", "colorprey"}], "]"}]}]}], "}"}]}], ",", 
+         RowBox[{"ImageSize", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{"230", ",", "230"}], "}"}]}]}], "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"plot2", "=", 
+       RowBox[{"ParametricPlot", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"Extract", "[", 
+            RowBox[{
+             RowBox[{"Evaluate", "[", 
+              RowBox[{
+               RowBox[{"n1", "[", "t", "]"}], "/.", "\[InvisibleSpace]", 
+               "sol"}], "]"}], ",", "1"}], "]"}], ",", 
+           RowBox[{"Extract", "[", 
+            RowBox[{
+             RowBox[{"Evaluate", "[", 
+              RowBox[{
+               RowBox[{"n2", "[", "t", "]"}], "/.", "\[InvisibleSpace]", 
+               "sol"}], "]"}], ",", "1"}], "]"}]}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"t", ",", "0", ",", "tend"}], "}"}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{"PlotRange", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"-", "0.05"}], " ", "n1max"}], ",", "n1max"}], "}"}], 
+            ",", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"-", "0.05"}], " ", "n2max"}], ",", "n2max"}], "}"}]}],
+            "}"}]}], ",", 
+         RowBox[{"AxesOrigin", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"-", "0.05"}], " ", "n1max"}], ",", 
+            RowBox[{
+             RowBox[{"-", "0.05"}], "n2max"}]}], "}"}]}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{"AxesLabel", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"Style", "[", 
+             RowBox[{"\"\<prey\>\"", ",", "colorprey"}], "]"}], ",", 
+            RowBox[{"Style", "[", 
+             RowBox[{"\"\<predator\>\"", ",", "colorpredator"}], "]"}]}], " ",
+            "}"}]}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{"n10", "<", "n10min"}], ",", 
+        RowBox[{"n10", "=", "n10min"}]}], "]"}], ";", "\[IndentingNewLine]", 
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{"n20", "<", "n20min"}], ",", 
+        RowBox[{"n20", "=", "n20min"}]}], "]"}], ";", "\[IndentingNewLine]", 
+      RowBox[{"If", "[", 
+       RowBox[{"axes", ",", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"If", "[", 
+           RowBox[{
+            RowBox[{"n10", ">", "n10max"}], ",", 
+            RowBox[{"n10", "=", "n10max"}]}], "]"}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"If", "[", 
+           RowBox[{
+            RowBox[{"n20", ">", "n20max"}], ",", 
+            RowBox[{"n20", "=", "n20max"}]}], "]"}]}], ")"}], ",", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"If", "[", 
+           RowBox[{
+            RowBox[{"n10", ">", "n10maxfix"}], ",", 
+            RowBox[{"n10", "=", "n10maxfix"}]}], "]"}], ";", 
+          RowBox[{"If", "[", 
+           RowBox[{
+            RowBox[{"n20", ">", "n20maxfix"}], ",", 
+            RowBox[{"n20", "=", "n20maxfix"}]}], "]"}]}], ")"}]}], "]"}], ";",
+       "\[IndentingNewLine]", 
+      RowBox[{"startv", "=", 
+       RowBox[{"Graphics", "[", 
+        RowBox[{
+         RowBox[{"Locator", "[", 
+          RowBox[{
+           RowBox[{"Dynamic", "[", 
+            RowBox[{"{", 
+             RowBox[{"n10", ",", "n20"}], "}"}], "]"}], ",", 
+           RowBox[{"Background", "\[Rule]", "Yellow"}], ",", 
+           RowBox[{"LocatorRegion", "\[Rule]", "Automatic"}]}], "]"}], ",", 
+         RowBox[{"PlotRange", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"n10min", ",", "n10max"}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"n20min", ",", "n20max"}], "}"}]}], "}"}]}]}], "]"}]}], 
+      ";", "\[IndentingNewLine]", 
+      RowBox[{"pl3list", "=", 
+       RowBox[{"{", 
+        RowBox[{"plot2", ",", "gr1", ",", "gr2", ",", "startv"}], "}"}]}], 
+      ";", "\[IndentingNewLine]", 
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{"vec", "\[NotEqual]", " ", "\"\<none\>\""}], ",", 
+        RowBox[{"AppendTo", "[", 
+         RowBox[{"pl3list", ",", "\[IndentingNewLine]", 
+          RowBox[{"VectorPlot", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"r1", " ", "x", " ", 
+                RowBox[{"(", 
+                 RowBox[{"1", "-", 
+                  SuperscriptBox["x", "theta"]}], ")"}]}], "-", 
+               FractionBox[
+                RowBox[{"c", " ", "y", " ", "x"}], 
+                RowBox[{"1", "+", 
+                 RowBox[{"h", " ", "c", " ", "x"}]}]]}], ",", " ", 
+              RowBox[{"y", " ", 
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"r2", " ", 
+                  FractionBox[
+                   RowBox[{"x", " ", "c"}], 
+                   RowBox[{"1", "+", 
+                    RowBox[{"h", " ", "c", " ", "x"}]}]]}], "-", " ", "d", 
+                 "-", 
+                 RowBox[{"g", " ", "y"}]}], ")"}]}]}], " ", "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"x", ",", 
+              RowBox[{"0.05", "n1max"}], ",", 
+              RowBox[{".95", "n1max"}]}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"y", ",", 
+              RowBox[{"0.05", "n2max"}], ",", 
+              RowBox[{".95", "n2max"}]}], "}"}], ",", 
+            RowBox[{"VectorPoints", "\[Rule]", "vecplts"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"VectorScale", "\[Rule]", 
+             RowBox[{"If", "[", 
+              RowBox[{
+               RowBox[{"vec", "===", "\"\<scaled\>\""}], ",", 
+               RowBox[{"{", 
+                RowBox[{"Automatic", ",", 
+                 RowBox[{"Scaled", "[", "n1n2max", "]"}]}], "}"}], ",", 
+               "Medium"}], "]"}]}]}], "]"}]}], "]"}]}], "]"}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Grid", "[", 
+       RowBox[{"{", 
+        RowBox[{"{", 
+         RowBox[{"plot1", ",", 
+          RowBox[{"Show", "[", 
+           RowBox[{"pl3list", ",", 
+            RowBox[{"AspectRatio", "\[Rule]", "1"}], ",", 
+            RowBox[{"ImageSize", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{"230", ",", "230"}], "}"}]}]}], "]"}]}], "}"}], "}"}], 
+       "]"}]}]}], "\[IndentingNewLine]", "]"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"tend", ",", "tendinit", ",", "\"\<maximum time\>\""}], "}"}], 
+     ",", "tendmin", ",", "tendmax", ",", "deltatend", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"r1", ",", "r1init", ",", "\"\<prey's growth rate\>\""}], "}"}],
+      ",", "r1min", ",", "r1max", ",", "deltar1", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "theta", ",", "thetainit", ",", 
+       "\"\<prey's density dependence \[Theta]\>\""}], "}"}], ",", "thetamin",
+      ",", "thetamax", ",", "deltatheta", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"r2", ",", "r2init", ",", "\"\<conversion efficiency\>\""}], 
+      "}"}], ",", "r2min", ",", "r2max", ",", "deltar2", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"c", ",", "cinit", ",", "\"\<attack rate\>\""}], "}"}], ",", 
+     "cmin", ",", "cmax", ",", "deltac", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "h", ",", "hinit", ",", "\"\<predator's \\\"handling\\\" time\>\""}], 
+      "}"}], ",", "hmin", ",", "hmax", ",", "deltah", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"d", ",", "dinit", ",", "\"\<predator's death rate\>\""}], 
+      "}"}], ",", "dmin", ",", "dmax", ",", "deltad", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "g", ",", "ginit", ",", "\"\<competition between predators\>\""}], 
+      "}"}], ",", "gmin", ",", "gmax", ",", "deltag", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "vec", ",", "\"\<unscaled\>\"", ",", "\"\<vectors in phase plot\>\""}], 
+      "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "\"\<unscaled\>\"", ",", "\"\<scaled\>\"", ",", "\"\<none\>\""}], 
+      "}"}]}], "}"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"axes", ",", "True", ",", "\"\<automatic scaling of axes\>\""}],
+       "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"False", ",", "True"}], "}"}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"n10", ",", ".05"}], "}"}], ",", 
+     RowBox[{"ControlType", "\[Rule]", "None"}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"n20", ",", ".01"}], "}"}], ",", 
+     RowBox[{"ControlType", "\[Rule]", "None"}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"Initialization", "\[RuleDelayed]", 
+    RowBox[{"(", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"pe", "=", "\"\<predator \>\""}], ";", "\[IndentingNewLine]", 
+      RowBox[{"py", "=", "\"\<prey\>\""}], ";", "\[IndentingNewLine]", 
+      RowBox[{"tendinit", "=", "600"}], ";", 
+      RowBox[{"tendmin", "=", "20"}], ";", 
+      RowBox[{"tendmax", "=", "5000"}], ";", 
+      RowBox[{"deltatend", "=", "20"}], ";", "\[IndentingNewLine]", 
+      RowBox[{"cinit", "=", "2.5"}], ";", 
+      RowBox[{"cmin", "=", "0.0"}], ";", 
+      RowBox[{"cmax", "=", "10"}], ";", 
+      RowBox[{"deltac", "=", "0.1"}], ";", "\[IndentingNewLine]", 
+      RowBox[{"hinit", "=", "0.5"}], ";", 
+      RowBox[{"hmin", "=", "0.0"}], ";", 
+      RowBox[{"hmax", "=", "2.5"}], ";", 
+      RowBox[{"deltah", "=", "0.025"}], ";", "\[IndentingNewLine]", 
+      RowBox[{"r1init", "=", "0.08"}], ";", 
+      RowBox[{"r1min", "=", 
+       RowBox[{"-", "0.01"}]}], ";", 
+      RowBox[{"r1max", "=", "3"}], ";", 
+      RowBox[{"deltar1", "=", "0.005"}], ";", "\[IndentingNewLine]", 
+      RowBox[{"r2init", "=", "0.1"}], ";", 
+      RowBox[{"r2min", "=", "0.00"}], ";", 
+      RowBox[{"r2max", "=", "1.0"}], ";", 
+      RowBox[{"deltar2", "=", "0.01"}], ";", "\[IndentingNewLine]", 
+      RowBox[{"dinit", "=", "0.05"}], ";", 
+      RowBox[{"dmin", "=", "0.00"}], ";", 
+      RowBox[{"dmax", "=", ".5"}], ";", 
+      RowBox[{"deltad", "=", "0.002"}], ";", "\[IndentingNewLine]", 
+      RowBox[{"ginit", "=", "0.07"}], ";", 
+      RowBox[{"gmin", "=", "0.00"}], ";", 
+      RowBox[{"gmax", "=", "10"}], ";", 
+      RowBox[{"deltag", "=", "0.002"}], ";", "\[IndentingNewLine]", 
+      RowBox[{"thetainit", "=", "1."}], ";", 
+      RowBox[{"thetamin", "=", "0.1"}], ";", 
+      RowBox[{"thetamax", "=", "20."}], ";", 
+      RowBox[{"deltatheta", "=", "0.05"}], ";"}], "\[IndentingNewLine]", 
+     ")"}]}], ",", "\[IndentingNewLine]", 
+   RowBox[{"SynchronousUpdating", "\[Rule]", "False"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"ControlPlacement", "\[Rule]", "Top"}], ",", 
+   RowBox[{"AutorunSequencing", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"3", ",", "5", ",", "6", ",", "8"}], "}"}]}], ",", 
+   RowBox[{"TrackedSymbols", "\[Rule]", "True"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.3925526026997857`*^9, 3.392552636989091*^9}, {
+   3.3925526797605934`*^9, 3.3925527168339024`*^9}, {3.3925577743662767`*^9, 
+   3.3925579176422977`*^9}, {3.3925579481862173`*^9, 
+   3.3925579651305823`*^9}, {3.3925580774020205`*^9, 3.392558149956349*^9}, {
+   3.3925581935890894`*^9, 3.3925581937092624`*^9}, {3.3925582372518735`*^9, 
+   3.392558443929061*^9}, {3.39255849952901*^9, 3.3925585102444177`*^9}, {
+   3.392558715179099*^9, 3.3925587228601437`*^9}, {3.392559114923904*^9, 
+   3.3925591659172287`*^9}, {3.3925600576795197`*^9, 3.392560118236597*^9}, 
+   3.3925603878442736`*^9, {3.3925604203209724`*^9, 3.392560520715333*^9}, {
+   3.3925608261044607`*^9, 3.3925608920092273`*^9}, {3.392561032210827*^9, 
+   3.3925610343539085`*^9}, {3.392561141618147*^9, 3.3925611457040224`*^9}, 
+   3.392561310961651*^9, {3.3926029419749794`*^9, 3.39260296674059*^9}, {
+   3.3926032438089952`*^9, 3.3926032522411203`*^9}, {3.392603433381587*^9, 
+   3.39260343384225*^9}, {3.392603562206829*^9, 3.3926035634285855`*^9}, {
+   3.392603659887286*^9, 3.392603662701333*^9}, {3.392604560322048*^9, 
+   3.392604562615346*^9}, {3.392604761361128*^9, 3.392604763964872*^9}, {
+   3.3926051668541985`*^9, 3.392605168015869*^9}, 3.392605508215051*^9, {
+   3.3926111761277776`*^9, 3.392611185431155*^9}, {3.3926231022459955`*^9, 
+   3.3926231031673203`*^9}, {3.3926235860216303`*^9, 
+   3.3926235862619762`*^9}, {3.3926239050804143`*^9, 
+   3.3926239996263647`*^9}, {3.3926240347869234`*^9, 3.392624055366515*^9}, {
+   3.392624388775934*^9, 3.3926243911092896`*^9}, {3.392626063474032*^9, 
+   3.392626109710517*^9}, {3.3926261639785504`*^9, 3.3926261784493585`*^9}, {
+   3.3926262510838013`*^9, 3.3926262543585105`*^9}, {3.3926264689370594`*^9, 
+   3.3926264728326607`*^9}, 3.392626555581648*^9, {3.392626724814994*^9, 
+   3.3926267249351664`*^9}, {3.3926270155129967`*^9, 3.392627015683242*^9}, 
+   3.392627284800213*^9, {3.3926276762330656`*^9, 3.3926276770842896`*^9}, {
+   3.392627766803299*^9, 3.3926277760966625`*^9}, {3.392627981251661*^9, 
+   3.3926279901144047`*^9}, {3.3926280470462685`*^9, 
+   3.3926280671651983`*^9}, {3.392628127542016*^9, 3.3926281303560624`*^9}, {
+   3.3926293239723983`*^9, 3.392629329850851*^9}, {3.3926296335675745`*^9, 
+   3.3926296352399793`*^9}, {3.3926297496945567`*^9, 
+   3.3926297738392754`*^9}, {3.3926298621863117`*^9, 3.392629876807336*^9}, {
+   3.392630116502*^9, 3.3926301184648223`*^9}, {3.392630449861347*^9, 
+   3.3926304509829597`*^9}, {3.392630502176573*^9, 3.3926305029076242`*^9}, {
+   3.3926305535504446`*^9, 3.392630624762843*^9}, {3.3926306734428415`*^9, 
+   3.392630747619502*^9}, {3.392630831149613*^9, 3.3926308437477283`*^9}, {
+   3.392630927448083*^9, 3.392630976318355*^9}, {3.3926310181585183`*^9, 
+   3.392631071595357*^9}, {3.392631205307626*^9, 3.3926312217312417`*^9}, {
+   3.3926354787046304`*^9, 3.3926355036404867`*^9}, {3.392686535068205*^9, 
+   3.392686535248464*^9}, {3.39268717390681*^9, 3.3926871879469986`*^9}, {
+   3.3927964192894545`*^9, 3.3927964705631824`*^9}, {3.3927969217619743`*^9, 
+   3.3927970264825554`*^9}, {3.3929877530610723`*^9, 3.392987756285709*^9}, 
+   3.392995012329387*^9, {3.3929961185300255`*^9, 3.392996118820443*^9}, {
+   3.392996349351931*^9, 3.3929963494420605`*^9}, {3.3930259682767105`*^9, 
+   3.3930259694483953`*^9}, {3.3930260750101857`*^9, 
+   3.3930260879487906`*^9}, {3.393030789349072*^9, 3.3930308844758577`*^9}, {
+   3.3930310459780865`*^9, 3.393031046138317*^9}, {3.3930312043057504`*^9, 
+   3.393031254547995*^9}, {3.39303132748287*^9, 3.3930313275830145`*^9}, 
+   3.393031367300125*^9, {3.3930318683506002`*^9, 3.393031869201824*^9}, {
+   3.393068982080781*^9, 3.393068982241011*^9}, {3.3930690163500576`*^9, 
+   3.3930690165203023`*^9}, {3.393070500494152*^9, 3.393070519501483*^9}, {
+   3.393074102693861*^9, 3.393074152645688*^9}, {3.3930741943556643`*^9, 
+   3.393074196789163*^9}, {3.3930742370470514`*^9, 3.3930742386092978`*^9}, {
+   3.3930742764136577`*^9, 3.3930743731727905`*^9}, {3.3930766307390113`*^9, 
+   3.393076636086701*^9}, {3.39307689272573*^9, 3.393077050162112*^9}, {
+   3.393077160530814*^9, 3.3930771642661858`*^9}, 3.393077210702958*^9, {
+   3.393077348941736*^9, 3.3930773510047026`*^9}, {3.393084413660302*^9, 
+   3.3930844334487567`*^9}, 3.3930861986269584`*^9, {3.3930864869916067`*^9, 
+   3.3930865064596*^9}, {3.393086557603141*^9, 3.3930865606575327`*^9}, {
+   3.3930867055458717`*^9, 3.3930867067375855`*^9}, {3.393086782005816*^9, 
+   3.3930868023951344`*^9}, {3.3930868950583773`*^9, 3.393086910971259*^9}, {
+   3.393086975584168*^9, 3.393086992378317*^9}, {3.39308741692879*^9, 
+   3.3930874286756816`*^9}, {3.3930879299564877`*^9, 
+   3.3930879305473375`*^9}, {3.393088000227533*^9, 3.3930880049242864`*^9}, {
+   3.393088105739251*^9, 3.3930881084231105`*^9}, 3.39308814966241*^9, {
+   3.393088179845811*^9, 3.393088180847251*^9}, 3.3930883386741953`*^9, {
+   3.393088517421221*^9, 3.393088541786256*^9}, {3.393088808089181*^9, 
+   3.3930888373212147`*^9}, 3.3930888970470963`*^9, {3.393089073701112*^9, 
+   3.3930891729538307`*^9}, {3.393089325663416*^9, 3.393089341335952*^9}, {
+   3.393089373211787*^9, 3.3930894507532864`*^9}, {3.3930895379586816`*^9, 
+   3.3930895583880577`*^9}, {3.3930895967632384`*^9, 3.393089601449978*^9}, 
+   3.3930896430798388`*^9, {3.3930898058639107`*^9, 3.3930898150471153`*^9}, {
+   3.393090235551771*^9, 3.3930902782631874`*^9}, {3.3930903644471135`*^9, 
+   3.3930904158910866`*^9}, {3.3930908973533955`*^9, 3.39309095610788*^9}, {
+   3.393091086815829*^9, 3.393091088998968*^9}, {3.3930914069962254`*^9, 
+   3.393091408748746*^9}, {3.393091545335147*^9, 3.393091579674525*^9}, 
+   3.393091615526077*^9, {3.393091663154563*^9, 3.39309167414036*^9}, {
+   3.3930917862415533`*^9, 3.393091826890003*^9}, {3.393091870352499*^9, 
+   3.393091919793592*^9}, 3.3930919598111343`*^9, {3.3930924715569887`*^9, 
+   3.393092538202821*^9}, {3.393092713274562*^9, 3.3930927143661313`*^9}, {
+   3.393092768153474*^9, 3.3930927746828623`*^9}, {3.39309283581076*^9, 
+   3.3930928498910065`*^9}, {3.393092892492264*^9, 3.393092893013013*^9}, {
+   3.3930929380978413`*^9, 3.393092950525712*^9}, {3.393119024092693*^9, 
+   3.3931190466751647`*^9}, 3.3931195605741153`*^9, {3.3931196206905584`*^9, 
+   3.393119640509056*^9}, {3.3931207319885263`*^9, 3.3931207506153107`*^9}, {
+   3.393120814657398*^9, 3.39312081905372*^9}, {3.393120882875491*^9, 
+   3.393120910334976*^9}, {3.3931211762072816`*^9, 3.3931211777194557`*^9}, {
+   3.3931212296841774`*^9, 3.393121243093459*^9}, {3.393151258085293*^9, 
+   3.3931512861957135`*^9}, {3.3931518865790224`*^9, 3.393152029274208*^9}, {
+   3.3931523874993105`*^9, 3.3931524017297726`*^9}, {3.3931532821858063`*^9, 
+   3.393153301683843*^9}, 3.393153334681291*^9, {3.39316050801604*^9, 
+   3.3931605096584015`*^9}, {3.3931605544928703`*^9, 3.393160637271901*^9}, 
+   3.3931607095458255`*^9, {3.3931611255440016`*^9, 3.3931611469447746`*^9}, 
+   3.3931611965661263`*^9, 3.393161620135189*^9, 3.3931618786769533`*^9, {
+   3.393162242820566*^9, 3.393162264591872*^9}, {3.3931623483222704`*^9, 
+   3.3931624080882096`*^9}, {3.3931624780187645`*^9, 3.393162488664072*^9}, {
+   3.3931625539679747`*^9, 3.3931625659151535`*^9}, {3.393162623007248*^9, 
+   3.3931626298771267`*^9}, {3.393162661081997*^9, 3.3931626628545456`*^9}, {
+   3.3931626981753345`*^9, 3.3931627021310225`*^9}, {3.3931627461943827`*^9, 
+   3.3931627577009277`*^9}, {3.3931628838423104`*^9, 
+   3.3931629019683743`*^9}, {3.393162953302189*^9, 3.3931629930293136`*^9}, {
+   3.3931630485090895`*^9, 3.39316316784068*^9}, {3.3931632108425136`*^9, 
+   3.3931632409157567`*^9}, {3.3931666014179215`*^9, 
+   3.3931666077570367`*^9}, {3.3931667473677874`*^9, 
+   3.3931667510030146`*^9}, {3.393167178407592*^9, 3.3931671906351748`*^9}, {
+   3.3938633095803394`*^9, 3.393863318813616*^9}, {3.3938634068702354`*^9, 
+   3.393863418577069*^9}, {3.393863506413371*^9, 3.3938635345137777`*^9}, {
+   3.393863753959325*^9, 3.3938638493865423`*^9}, {3.393863882924768*^9, 
+   3.3938639078305807`*^9}, {3.3938639700200047`*^9, 
+   3.3938640079445376`*^9}, {3.393864360952138*^9, 3.393864377365739*^9}, 
+   3.393864448167547*^9, {3.3938645053898287`*^9, 3.393864511458555*^9}, {
+   3.3938651906652064`*^9, 3.3938652314238143`*^9}, {3.393865447444437*^9, 
+   3.3938656541616817`*^9}, {3.393865687269288*^9, 3.39386569141525*^9}, {
+   3.3938657842988095`*^9, 3.3938657957853265`*^9}, {3.3938658407499824`*^9, 
+   3.3938658695714254`*^9}, {3.393865999618424*^9, 3.393866008250837*^9}, {
+   3.393866086693632*^9, 3.3938662044729905`*^9}, {3.393866313179302*^9, 
+   3.393866335030723*^9}, 3.393866485987789*^9, {3.393868559819813*^9, 
+   3.3938685808400383`*^9}, {3.3938688159280787`*^9, 
+   3.3938688357265472`*^9}, {3.3938688751932974`*^9, 3.393868900760061*^9}, {
+   3.393869137760851*^9, 3.3938691379010525`*^9}, {3.393869170678184*^9, 
+   3.3938691708283997`*^9}, 3.393869256251232*^9, {3.3938693645870113`*^9, 
+   3.393869370475478*^9}, {3.3938694401456594`*^9, 3.393869468776829*^9}, {
+   3.393869570272773*^9, 3.393869571484515*^9}, {3.393903881662184*^9, 
+   3.393903905045808*^9}, {3.393903938974595*^9, 3.3939040402702513`*^9}, {
+   3.3939397580067024`*^9, 3.393939868605736*^9}, {3.3939399146419325`*^9, 
+   3.393939948760994*^9}, {3.3939400883016434`*^9, 3.393940119626686*^9}, {
+   3.3939402198107443`*^9, 3.393940219890859*^9}, {3.393940290762768*^9, 
+   3.393940291343603*^9}, {3.393940342216755*^9, 3.3939403428176193`*^9}, 
+   3.393990284428477*^9, {3.405188394737635*^9, 3.4051883983528337`*^9}, {
+   3.4052287416869216`*^9, 3.4052287423378572`*^9}, {3.40522910982628*^9, 
+   3.4052291181282177`*^9}, {3.405231169087352*^9, 3.4052311753964243`*^9}, {
+   3.4052312573042016`*^9, 3.405231291162888*^9}, {3.405231390706024*^9, 
+   3.4052313975158157`*^9}, 3.4052314698398128`*^9, {3.4052315547719393`*^9, 
+   3.405231558016605*^9}, 3.4052317843320303`*^9, {3.4052318484542336`*^9, 
+   3.4052318849366927`*^9}, {3.405232064284582*^9, 3.4052320655463967`*^9}, {
+   3.405232236542277*^9, 3.4052322415895343`*^9}, {3.405232364566366*^9, 
+   3.405232370474862*^9}, {3.405232794194141*^9, 3.405232798750693*^9}, {
+   3.405232862642565*^9, 3.4052328688414783`*^9}, {3.4052330478488784`*^9, 
+   3.405233052375387*^9}, {3.405233942695605*^9, 3.405233966409704*^9}, {
+   3.405236168846653*^9, 3.40523618859505*^9}, {3.405237555270232*^9, 
+   3.40523755606137*^9}, {3.4052383206007233`*^9, 3.405238321151515*^9}, {
+   3.4052384377892323`*^9, 3.4052384404630766`*^9}, {3.4052389208838882`*^9, 
+   3.405238966799912*^9}, {3.405240581141221*^9, 3.405240598275859*^9}, 
+   3.4052406559087315`*^9, 3.405243915595931*^9, {3.4052442213656063`*^9, 
+   3.405244252750736*^9}, {3.4052442887525043`*^9, 3.4052442935193586`*^9}, 
+   3.405247188722456*^9, {3.4052475205395856`*^9, 3.4052475213207088`*^9}, {
+   3.4052475735057473`*^9, 3.405247584812005*^9}, {3.4052520546077375`*^9, 
+   3.4052520611070833`*^9}, {3.405254637111195*^9, 3.4052547139416723`*^9}, {
+   3.40525480936889*^9, 3.405254850708333*^9}, {3.4052548855183873`*^9, 
+   3.4052549267576866`*^9}, 3.4052549646421614`*^9, {3.405260788766842*^9, 
+   3.405260792912803*^9}, {3.405261063251531*^9, 3.4052610681986446`*^9}, 
+   3.4052611954115677`*^9, {3.4052628419992447`*^9, 3.405262847537208*^9}, {
+   3.405516387661891*^9, 3.4055164849317584`*^9}, {3.4055165163569455`*^9, 
+   3.4055165252597475`*^9}, {3.4055166086897135`*^9, 3.405516640946096*^9}, {
+   3.4055167327180576`*^9, 3.405516786435299*^9}, {3.4055207170712833`*^9, 
+   3.4055207213173885`*^9}, {3.405520817004981*^9, 3.4055208453857903`*^9}, {
+   3.4055209071746387`*^9, 3.4055209203736176`*^9}, {3.4055209515985165`*^9, 
+   3.4055209529104033`*^9}, {3.405520987029464*^9, 3.4055210017606463`*^9}, 
+   3.4055210942236013`*^9, {3.4055212057039022`*^9, 3.405521208818381*^9}, {
+   3.4055212424166927`*^9, 3.405521242566909*^9}, {3.4055213114659805`*^9, 
+   3.405521458837891*^9}, 3.4055217069646797`*^9, {3.405521819176032*^9, 
+   3.405521820227544*^9}, 3.405522028446949*^9, {3.4055221026436386`*^9, 
+   3.405522103735208*^9}, {3.4055221649832783`*^9, 3.4055221659346466`*^9}, {
+   3.4055222635049458`*^9, 3.405522266739597*^9}, {3.405522579869856*^9, 
+   3.40552258222324*^9}, {3.40552284009404*^9, 3.40552284250751*^9}, {
+   3.405522882875557*^9, 3.4055228893949313`*^9}, {3.4055229946062174`*^9, 
+   3.4055230163074226`*^9}, {3.405523298693474*^9, 3.4055233083072977`*^9}, {
+   3.4055233831549234`*^9, 3.4055233849475007`*^9}, 3.405523434228363*^9, 
+   3.405523479863984*^9, {3.4055235468803487`*^9, 3.405523560089342*^9}, {
+   3.405523820623973*^9, 3.405523927547722*^9}, {3.405523974675488*^9, 
+   3.4055240044883566`*^9}, {3.405524175654482*^9, 3.4055241827647057`*^9}, 
+   3.405524307383899*^9, 3.4055244995402064`*^9, {3.405524644368459*^9, 
+   3.405524698416176*^9}, {3.4055247555583425`*^9, 3.4055247693081136`*^9}, {
+   3.4055248467594833`*^9, 3.4055248699528337`*^9}, 3.405524965450152*^9, {
+   3.4055250656041665`*^9, 3.4055250665755634`*^9}, {3.40552510885636*^9, 
+   3.4055251235675135`*^9}, {3.4055251854665203`*^9, 3.4055251885609694`*^9}, 
+   3.405525398993557*^9, {3.4055254732403183`*^9, 3.4055254978757424`*^9}, {
+   3.405525642303419*^9, 3.4055256588972797`*^9}, {3.4055266924935184`*^9, 
+   3.405526711811296*^9}, 3.405527083065133*^9, {3.405528233118829*^9, 
+   3.4055282512749357`*^9}, {3.4055327715195246`*^9, 
+   3.4055327802020097`*^9}, {3.4055344590660973`*^9, 3.405534476831643*^9}, {
+   3.4055773787622766`*^9, 3.405577391590723*^9}, {3.4055810687482157`*^9, 
+   3.4055810691487923`*^9}, {3.4055810996326256`*^9, 
+   3.4055811375371294`*^9}, {3.4055816246876173`*^9, 3.4055816823104753`*^9}, 
+   3.405581901075043*^9, {3.405582627539648*^9, 3.405582645154978*^9}, {
+   3.405584141166136*^9, 3.4055841645798035`*^9}, {3.405584224966635*^9, 
+   3.4055842331283712`*^9}, {3.405584333342472*^9, 3.405584376484507*^9}, 
+   3.4055844237624893`*^9, 3.405588066541704*^9, {3.4055882748512383`*^9, 
+   3.4055882754120445`*^9}, {3.405588323481165*^9, 3.4055883326042833`*^9}, {
+   3.405588638644347*^9, 3.4055886414483795`*^9}, {3.405589036035768*^9, 
+   3.405589045639578*^9}, 3.405589100728792*^9, 3.4055892927949696`*^9, {
+   3.4055893480444145`*^9, 3.405589349556589*^9}, {3.405589601098288*^9, 
+   3.405589607287187*^9}, {3.405589683867304*^9, 3.405589739327051*^9}, {
+   3.4055898272534833`*^9, 3.405589830778552*^9}, 3.405589926666432*^9, {
+   3.405590035943565*^9, 3.4055900376159697`*^9}, {3.405590821252784*^9, 
+   3.4055908752304*^9}, {3.4055910537871523`*^9, 3.405591079794549*^9}, {
+   3.405591126982402*^9, 3.405591147451835*^9}, {3.405591252713194*^9, 
+   3.405591253794749*^9}, {3.405591328902749*^9, 3.40559134055951*^9}, {
+   3.405591371043344*^9, 3.4055914088076468`*^9}, {3.4055917435890384`*^9, 
+   3.4055917441899023`*^9}, {3.405593038140512*^9, 3.405593048986107*^9}, {
+   3.405593098276984*^9, 3.4055931144402256`*^9}, {3.4055931465063343`*^9, 
+   3.4055931744965825`*^9}, {3.4055932387189293`*^9, 
+   3.4055932926965456`*^9}, {3.405593424946712*^9, 3.405593430003984*^9}, {
+   3.405593476851347*^9, 3.4055934809572515`*^9}, {3.4055935290864573`*^9, 
+   3.4055935637863536`*^9}, 3.4055936039641266`*^9, {3.405593645774246*^9, 
+   3.405593658422434*^9}, {3.405593719440173*^9, 3.405593724277128*^9}, {
+   3.405594149158077*^9, 3.4055941493483505`*^9}, {3.4055941855504065`*^9, 
+   3.405594292564285*^9}, 3.405609520211491*^9, {3.4056095566739216`*^9, 
+   3.4056095665280914`*^9}, {3.4056096374600863`*^9, 
+   3.4056096619452944`*^9}, {3.405678894485544*^9, 3.4056789195616016`*^9}, {
+   3.405679186385275*^9, 3.4056791898702865`*^9}, {3.405679371871992*^9, 
+   3.4056794018951635`*^9}, {3.4056796079114*^9, 3.405679663791752*^9}, {
+   3.4056796954272413`*^9, 3.4056797025374656`*^9}, {3.405679799366699*^9, 
+   3.4056798075785074`*^9}, 3.405679837711837*^9, {3.405679888885421*^9, 
+   3.405679926349291*^9}, {3.4056799888892193`*^9, 3.405679991923582*^9}, {
+   3.4056800241499214`*^9, 3.4056800918672943`*^9}, {3.4056802349229984`*^9, 
+   3.405680245548277*^9}, {3.4056803137563553`*^9, 3.405680314156931*^9}, {
+   3.4056803721403074`*^9, 3.405680384097501*^9}, {3.405680609151112*^9, 
+   3.4056806443617425`*^9}, {3.4056807278417807`*^9, 
+   3.4056807372653313`*^9}, {3.4056807733271856`*^9, 3.405680796330262*^9}, {
+   3.405680899418496*^9, 3.405680929381581*^9}, {3.4057880182924256`*^9, 
+   3.405788026984925*^9}, {3.4057884818690157`*^9, 3.4057885308694754`*^9}, {
+   3.405788569444944*^9, 3.40578862075873*^9}, {3.4057886883258867`*^9, 
+   3.4057888063455906`*^9}, {3.4057888745636835`*^9, 
+   3.4057888757954545`*^9}, {3.4057889196284833`*^9, 
+   3.4057889498018703`*^9}, {3.4057890615225167`*^9, 3.405789064086203*^9}, {
+   3.405789109261162*^9, 3.4057891487980127`*^9}, {3.4057893274248657`*^9, 
+   3.4057893353863134`*^9}, {3.405789686070573*^9, 3.405789695644339*^9}, {
+   3.4057897476791615`*^9, 3.405789752405958*^9}, {3.4057898452194176`*^9, 
+   3.4057898797190256`*^9}, {3.4057899991507597`*^9, 
+   3.4057900276216993`*^9}, {3.4057900727065277`*^9, 3.4057901173507233`*^9}, 
+   3.4057901611436944`*^9, {3.4057903011550207`*^9, 3.405790324768976*^9}, {
+   3.4057903977338943`*^9, 3.405790429098995*^9}, {3.405790465040677*^9, 
+   3.4057904788805776`*^9}, {3.405790626582963*^9, 3.4057906275944176`*^9}, {
+   3.405790691686578*^9, 3.4057906931386657`*^9}, {3.4057907654726768`*^9, 
+   3.405790810006714*^9}, {3.4057908623319535`*^9, 3.4057908698627825`*^9}, {
+   3.405790931010709*^9, 3.405790944610264*^9}, {3.405791012507896*^9, 
+   3.405791032306365*^9}, {3.4057911312386227`*^9, 3.405791202931712*^9}, {
+   3.40579125354449*^9, 3.405791260885045*^9}, {3.4057912945234146`*^9, 
+   3.4057913682994995`*^9}, 3.405791420073947*^9, {3.405791454313181*^9, 
+   3.405791455414765*^9}, {3.4057914991276207`*^9, 3.4057915377531614`*^9}, {
+   3.4057920458838177`*^9, 3.405792096436509*^9}, {3.40579351996344*^9, 
+   3.4057935567763743`*^9}, {3.405793736665042*^9, 3.4057937759415183`*^9}, {
+   3.4057938701870365`*^9, 3.4057938905563264`*^9}, {3.4057939286110463`*^9, 
+   3.4057939606370974`*^9}, {3.4057940031582403`*^9, 
+   3.4057940281241393`*^9}, {3.4057940587682033`*^9, 3.405794061532178*^9}, 
+   3.4057945666284704`*^9, {3.40579475758305*^9, 3.405794767186859*^9}, {
+   3.405794805592083*^9, 3.4057948069239984`*^9}, {3.405796109486992*^9, 
+   3.405796115044984*^9}, {3.405796185265957*^9, 3.405796246984704*^9}, {
+   3.405796305699131*^9, 3.4057963178966703`*^9}, {3.405796357834098*^9, 
+   3.4057963706024575`*^9}, {3.4057968829892335`*^9, 
+   3.4057969270025215`*^9}, {3.405796966319056*^9, 3.405796972648157*^9}, 
+   3.4057970278875875`*^9, {3.4057979311964817`*^9, 3.4057979373252945`*^9}, {
+   3.4057980041313567`*^9, 3.4057980059940352`*^9}, {3.405798059861493*^9, 
+   3.4057980824639935`*^9}, {3.405798124163955*^9, 3.4057981468165283`*^9}, {
+   3.4057983476953773`*^9, 3.4057983929204082`*^9}, 3.40579842526692*^9, {
+   3.405798563746043*^9, 3.4057987087345266`*^9}, 3.405798830800048*^9, {
+   3.4058003380073056`*^9, 3.4058003413621297`*^9}, {3.4058003792966766`*^9, 
+   3.4058003798875265`*^9}, {3.405800626281824*^9, 3.4058006426253247`*^9}, {
+   3.405827297662112*^9, 3.4058273037608814`*^9}, {3.4059150614744177`*^9, 
+   3.4059150850282865`*^9}, {3.40591512186125*^9, 3.4059151223920126`*^9}, {
+   3.405915246380299*^9, 3.4059152787067823`*^9}, {3.4059155645978737`*^9, 
+   3.4059156464555793`*^9}, {3.4059157505853105`*^9, 3.405915793867547*^9}, {
+   3.4059421028207684`*^9, 3.4059421449012766`*^9}, {3.4059421915183086`*^9, 
+   3.4059422446947727`*^9}, 3.4059422870256414`*^9, {3.4059423170988846`*^9, 
+   3.4059423227069488`*^9}, {3.4059425801371155`*^9, 
+   3.4059425984935102`*^9}, {3.405942883813781*^9, 3.405942913216059*^9}, {
+   3.405942966122134*^9, 3.405942979481344*^9}, {3.4059431139647217`*^9, 
+   3.4059431613728914`*^9}, {3.4059435230429473`*^9, 
+   3.4059435414293857`*^9}, {3.405944865751091*^9, 3.4059448953636723`*^9}, {
+   3.40594495205519*^9, 3.405944953467221*^9}, {3.405945001486269*^9, 
+   3.405945065738659*^9}, {3.405945236003488*^9, 3.40594524848143*^9}, {
+   3.4059453385609584`*^9, 3.4059453683437843`*^9}, {3.405945451843851*^9, 
+   3.4059454794535522`*^9}, {3.405945523787301*^9, 3.4059455727276735`*^9}, {
+   3.405946227809635*^9, 3.4059462360014143`*^9}, {3.4059462697499423`*^9, 
+   3.4059462714523907`*^9}, {3.405946306292488*^9, 3.4059463336317997`*^9}, {
+   3.405946367139982*^9, 3.405946386227429*^9}, {3.4059464180832353`*^9, 
+   3.405946418904416*^9}, {3.405946452512742*^9, 3.4059464857405214`*^9}, 
+   3.405947697993656*^9, {3.4059477421872034`*^9, 3.40594779022628*^9}, {
+   3.405947879524685*^9, 3.4059478889282064`*^9}, {3.4059479286353025`*^9, 
+   3.4059479351947346`*^9}, {3.4059480184344273`*^9, 
+   3.4059480254044495`*^9}, {3.405948066473504*^9, 3.405948118348096*^9}, {
+   3.4059481672584257`*^9, 3.4059481844831934`*^9}, {3.4059482565167727`*^9, 
+   3.405948259370877*^9}, {3.4059483060079374`*^9, 3.4059483213900557`*^9}, {
+   3.4059483579826736`*^9, 3.4059483862733536`*^9}, {3.405949129602208*^9, 
+   3.405949130052856*^9}, {3.405949184421034*^9, 3.405949186423914*^9}, {
+   3.40594923380204*^9, 3.405949238208376*^9}, {3.4059492746107197`*^9, 
+   3.40594928102995*^9}, {3.405949321658371*^9, 3.4059493243021727`*^9}, {
+   3.4059494344806013`*^9, 3.405949439417701*^9}, {3.4059535406449757`*^9, 
+   3.4059535714692993`*^9}, 3.405953663030958*^9, {3.405953703899725*^9, 
+   3.405953729095955*^9}, {3.4059538227406096`*^9, 3.405953824533187*^9}, {
+   3.405953886422179*^9, 3.4059538970274286`*^9}, {3.405954014856859*^9, 
+   3.4059540300587187`*^9}, {3.4059540670318832`*^9, 
+   3.4059541094028096`*^9}, {3.405954208134779*^9, 3.405954225009043*^9}, {
+   3.405957303355488*^9, 3.4059573471484594`*^9}, {3.4059575147094*^9, 
+   3.4059575244834547`*^9}, {3.4059584684207697`*^9, 
+   3.4059584817098784`*^9}, {3.405958517040682*^9, 3.405958526183829*^9}, {
+   3.405958556857936*^9, 3.4059586718933487`*^9}, 3.405958724749352*^9, {
+   3.4059588365701427`*^9, 3.405958842098091*^9}, {3.4059590436479053`*^9, 
+   3.4059590750029917`*^9}, {3.4059591082608147`*^9, 
+   3.4059591141993537`*^9}, {3.405959312244128*^9, 3.40595932314981*^9}, {
+   3.405959373031536*^9, 3.4059594228631907`*^9}, {3.4059594841913757`*^9, 
+   3.4059594851127005`*^9}, {3.4059595151158433`*^9, 3.405959516417715*^9}, {
+   3.4059595502163153`*^9, 3.405959576544173*^9}, {3.406028421631829*^9, 
+   3.406028422813528*^9}, {3.406028520774389*^9, 3.4060285527103105`*^9}, {
+   3.4060286104933987`*^9, 3.4060286135477905`*^9}, {3.4060286563493357`*^9, 
+   3.4060286710604897`*^9}, {3.4060287194200273`*^9, 3.406028782560819*^9}, {
+   3.4060288145367985`*^9, 3.40602881567844*^9}, {3.4060288499577312`*^9, 
+   3.4060288503683214`*^9}, {3.4060290279436626`*^9, 3.406029028634656*^9}, {
+   3.4060316308264236`*^9, 3.406031631277072*^9}, {3.4060316701229296`*^9, 
+   3.4060316864664307`*^9}, {3.406031762195323*^9, 3.4060317728806877`*^9}, {
+   3.406032421212944*^9, 3.4060324519771805`*^9}, {3.4060324877486176`*^9, 
+   3.406032487908848*^9}, {3.406034282369155*^9, 3.406034413958371*^9}, {
+   3.4060358765514765`*^9, 3.4060358857947683`*^9}, 3.406035924840914*^9, {
+   3.4060360069089217`*^9, 3.406036084800925*^9}, {3.4060369026269007`*^9, 
+   3.406036935183715*^9}, {3.4060370118038893`*^9, 3.4060370161801825`*^9}, {
+   3.406037214305072*^9, 3.406037218911696*^9}, {3.406038814115486*^9, 
+   3.406038814425933*^9}, {3.4060389625589375`*^9, 3.406038991640755*^9}, {
+   3.4060568264462657`*^9, 3.406056838303315*^9}, {3.4060570934602127`*^9, 
+   3.40605711086524*^9}, {3.4060572885507393`*^9, 3.4060573431692767`*^9}, {
+   3.4060577511359043`*^9, 3.406057766528037*^9}, {3.4060587443540816`*^9, 
+   3.406058813864032*^9}, 3.40605884886436*^9, {3.406058902511501*^9, 
+   3.4060589374717712`*^9}, {3.4060593573955917`*^9, 3.40605935843709*^9}, {
+   3.406059497396904*^9, 3.4060595275502625`*^9}, {3.406060811356285*^9, 
+   3.4060608719133615`*^9}, 3.4060609115403423`*^9, 3.4060609488940544`*^9, {
+   3.4060615485563264`*^9, 3.4060616239948015`*^9}, {3.4060619310062623`*^9, 
+   3.406061975640443*^9}, {3.4060623732722096`*^9, 3.406062374453909*^9}, {
+   3.4060625528003583`*^9, 3.406062559770381*^9}, {3.4060633820026927`*^9, 
+   3.4060633862487984`*^9}, {3.406063458873227*^9, 3.4060634662338114`*^9}, 
+   3.406064179509451*^9, {3.4060642523541965`*^9, 3.406064253435752*^9}, {
+   3.406096782908536*^9, 3.406096808735674*^9}, {3.4060969117337775`*^9, 
+   3.4060969182130947`*^9}, {3.4060974392422976`*^9, 
+   3.4060974799708624`*^9}, {3.406097692536517*^9, 3.4060977215382195`*^9}, {
+   3.4060977637288866`*^9, 3.406097788824973*^9}, {3.4060978377953887`*^9, 
+   3.406097916148054*^9}, {3.4060980722324924`*^9, 3.4060981077836127`*^9}, {
+   3.4060982411453776`*^9, 3.406098255606171*^9}, {3.406098373175227*^9, 
+   3.406098381977885*^9}, {3.4060984707455263`*^9, 3.4060984727784495`*^9}, {
+   3.4060985325944605`*^9, 3.4060985347675858`*^9}, {3.406099404257851*^9, 
+   3.4060994057700253`*^9}, {3.406099438857603*^9, 3.406099440399821*^9}, {
+   3.4060994737377586`*^9, 3.4060994786848717`*^9}, {3.4060996374030976`*^9, 
+   3.4060996514533005`*^9}, {3.4060996938843136`*^9, 
+   3.4060997091262302`*^9}, {3.4060998077480416`*^9, 3.406099828868411*^9}, {
+   3.406099898418419*^9, 3.406099903075115*^9}, 3.4060999381856017`*^9, 
+   3.4060999788440657`*^9, 3.4061001233118*^9, {3.406100176838768*^9, 
+   3.4061001946844287`*^9}, {3.406100248672059*^9, 3.406100249593384*^9}, {
+   3.4061003416657777`*^9, 3.406100397876605*^9}, {3.406100433057192*^9, 
+   3.4061004335178547`*^9}, 3.406100466385115*^9, {3.4061009548474894`*^9, 
+   3.406100971160947*^9}, {3.406101111472706*^9, 3.4061011204656367`*^9}, 
+   3.4061011735319424`*^9, {3.4061015838519535`*^9, 3.4061015924543233`*^9}, 
+   3.40610164625168*^9, 3.4061016993380146`*^9, 3.4061017496703887`*^9, {
+   3.4061017849310913`*^9, 3.4061017887165346`*^9}, {3.4061020371237264`*^9, 
+   3.406102037764648*^9}, {3.4061028903806496`*^9, 3.406102890681082*^9}, {
+   3.406105204588317*^9, 3.406105221342408*^9}, 3.40610543995676*^9, {
+   3.4061056780791636`*^9, 3.4061056837473135`*^9}, {3.406105791532301*^9, 
+   3.406105792493683*^9}, {3.4061059277782125`*^9, 3.4061059518227873`*^9}, {
+   3.4061060450868945`*^9, 3.4061060584060464`*^9}, {3.4061063443371954`*^9, 
+   3.406106396532248*^9}, {3.4061070162133055`*^9, 3.406107032266389*^9}, {
+   3.406107131789496*^9, 3.4061071466208224`*^9}, {3.40610735229657*^9, 
+   3.406107405382904*^9}, {3.4061074882520638`*^9, 3.40610751193612*^9}, {
+   3.406108118848818*^9, 3.406108125688653*^9}, {3.406108238751229*^9, 
+   3.4061082414050446`*^9}, {3.4061277242399855`*^9, 
+   3.4061278470065155`*^9}, {3.4061278955463123`*^9, 3.406127950455267*^9}, {
+   3.406130766583389*^9, 3.406130842993261*^9}, {3.4061308806774483`*^9, 
+   3.406130897581755*^9}, {3.40613098904327*^9, 3.406131053185502*^9}, {
+   3.4061310888267517`*^9, 3.406131202760581*^9}, {3.406131289325054*^9, 
+   3.406131337824794*^9}, {3.4061323237925453`*^9, 3.406132339014434*^9}, 
+   3.4061324071924686`*^9, 3.4061378265451155`*^9, {3.4061386235511537`*^9, 
+   3.4061387184876657`*^9}, {3.4061964037364416`*^9, 3.4061964088538*^9}, {
+   3.406196583675181*^9, 3.4061966008298483`*^9}, {3.40619667148144*^9, 
+   3.406196676258309*^9}, 3.4061967537797794`*^9, 3.4061968120135155`*^9, {
+   3.4061968658709583`*^9, 3.4061968664317646`*^9}, {3.4061969065995235`*^9, 
+   3.4061969082819424`*^9}, {3.4061973849473534`*^9, 
+   3.4061974040948863`*^9}, {3.4061975608402753`*^9, 3.406197562833141*^9}, {
+   3.4061979357093105`*^9, 3.406198003296496*^9}, {3.4061980355528784`*^9, 
+   3.4061981044219074`*^9}, {3.406198137189024*^9, 3.40619813724911*^9}, {
+   3.4062934911071606`*^9, 3.4062936475915356`*^9}, {3.4062937352634106`*^9, 
+   3.4062937411540356`*^9}, {3.4063973800892143`*^9, 3.4063973818317204`*^9}, 
+   3.406397614516304*^9, {3.4063980225430174`*^9, 3.4063980479495506`*^9}, {
+   3.4064039632026353`*^9, 3.4064039636557603`*^9}, {3.4064041254682603`*^9, 
+   3.4064041581401353`*^9}, 3.4064041906245103`*^9, {3.4064042214995103`*^9, 
+   3.4064042228432603`*^9}, {3.4064726645625*^9, 3.406472664984375*^9}, 
+   3.4065806151003504`*^9, {3.4065807646472254`*^9, 3.4065807772878504`*^9}, {
+   3.40669037160303*^9, 3.4066903838506413`*^9}, {3.406690443596552*^9, 
+   3.4066904798286514`*^9}, {3.40669220382764*^9, 3.406692256703672*^9}, 
+   3.406692305854347*^9, {3.40669237974059*^9, 3.406692490259509*^9}, {
+   3.4066925273828897`*^9, 3.406692532279931*^9}, {3.4066925804091377`*^9, 
+   3.406692604293482*^9}, {3.406697222714445*^9, 3.40669723372027*^9}, {
+   3.4066982178654013`*^9, 3.406698294565691*^9}, {3.4066985740675955`*^9, 
+   3.4066985794353137`*^9}, {3.40669861229256*^9, 3.40669861404508*^9}, {
+   3.4066997312415295`*^9, 3.4066997313617024`*^9}, {3.4066999281346483`*^9, 
+   3.4066999282648354`*^9}, {3.4067040914311743`*^9, 
+   3.4067040933339105`*^9}, {3.4067041646164093`*^9, 3.406704181620861*^9}, {
+   3.406704221458144*^9, 3.4067043103059006`*^9}, {3.4067188413057165`*^9, 
+   3.4067188419266095`*^9}, {3.4067188723203135`*^9, 
+   3.4067189080717216`*^9}, {3.406719277402794*^9, 3.40671929148304*^9}, {
+   3.5062125754125347`*^9, 3.506212603763669*^9}, {3.506212908614562*^9, 
+   3.50621296579828*^9}, {3.5062130265923586`*^9, 3.506213033179017*^9}, {
+   3.5062131129059887`*^9, 3.506213114551153*^9}},
+ CellID->24463954]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`axes$$ = True, $CellContext`c$$ = 
+    2.5, $CellContext`d$$ = 0.05, $CellContext`g$$ = 0.07, $CellContext`h$$ = 
+    0.5, $CellContext`n10$$ = 0.05, $CellContext`n20$$ = 
+    0.01, $CellContext`r1$$ = 0.08, $CellContext`r2$$ = 
+    0.1, $CellContext`tend$$ = 600, $CellContext`theta$$ = 
+    1., $CellContext`vec$$ = "unscaled", Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`tend$$], 600, "maximum time"}, 20, 5000, 20}, {{
+       Hold[$CellContext`r1$$], 0.08, "prey's growth rate"}, -0.01, 3, 
+      0.005}, {{
+       Hold[$CellContext`theta$$], 1., "prey's density dependence \[Theta]"}, 
+      0.1, 20., 0.05}, {{
+       Hold[$CellContext`r2$$], 0.1, "conversion efficiency"}, 0., 1., 
+      0.01}, {{
+       Hold[$CellContext`c$$], 2.5, "attack rate"}, 0., 10, 0.1}, {{
+       Hold[$CellContext`h$$], 0.5, "predator's \"handling\" time"}, 0., 2.5, 
+      0.025}, {{
+       Hold[$CellContext`d$$], 0.05, "predator's death rate"}, 0., 0.5, 
+      0.002}, {{
+       Hold[$CellContext`g$$], 0.07, "competition between predators"}, 0., 10,
+       0.002}, {{
+       Hold[$CellContext`vec$$], "unscaled", "vectors in phase plot"}, {
+      "unscaled", "scaled", "none"}}, {{
+       Hold[$CellContext`axes$$], True, "automatic scaling of axes"}, {
+      False, True}}, {{
+       Hold[$CellContext`n10$$], 0.05}}, {{
+       Hold[$CellContext`n20$$], 0.01}}}, Typeset`size$$ = {
+    468., {112.5, 117.5}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = False, $CellContext`tend$3066$$ = 
+    0, $CellContext`r1$3067$$ = 0, $CellContext`theta$3068$$ = 
+    0, $CellContext`r2$3069$$ = 0, $CellContext`c$3070$$ = 
+    0, $CellContext`h$3071$$ = 0, $CellContext`d$3072$$ = 
+    0, $CellContext`g$3073$$ = 0, $CellContext`vec$3074$$ = 
+    0, $CellContext`axes$3075$$ = False}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`axes$$ = True, $CellContext`c$$ = 
+        2.5, $CellContext`d$$ = 0.05, $CellContext`g$$ = 
+        0.07, $CellContext`h$$ = 0.5, $CellContext`n10$$ = 
+        0.05, $CellContext`n20$$ = 0.01, $CellContext`r1$$ = 
+        0.08, $CellContext`r2$$ = 0.1, $CellContext`tend$$ = 
+        600, $CellContext`theta$$ = 1., $CellContext`vec$$ = "unscaled"}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`tend$$, $CellContext`tend$3066$$, 0], 
+        Hold[$CellContext`r1$$, $CellContext`r1$3067$$, 0], 
+        Hold[$CellContext`theta$$, $CellContext`theta$3068$$, 0], 
+        Hold[$CellContext`r2$$, $CellContext`r2$3069$$, 0], 
+        Hold[$CellContext`c$$, $CellContext`c$3070$$, 0], 
+        Hold[$CellContext`h$$, $CellContext`h$3071$$, 0], 
+        Hold[$CellContext`d$$, $CellContext`d$3072$$, 0], 
+        Hold[$CellContext`g$$, $CellContext`g$3073$$, 0], 
+        Hold[$CellContext`vec$$, $CellContext`vec$3074$$, 0], 
+        Hold[$CellContext`axes$$, $CellContext`axes$3075$$, False]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> 
+      Module[{$CellContext`right1$, $CellContext`right2$, $CellContext`sol$, \
+$CellContext`n1max$, $CellContext`n2max$, $CellContext`n1n2max$, \
+$CellContext`plr2$, $CellContext`gr1$, $CellContext`gr2$, \
+$CellContext`plot1$, $CellContext`plot2$, $CellContext`startv$, \
+$CellContext`pl3list$, $CellContext`colorprey$ = 
+         Darker[Green, 0.5], $CellContext`colorpredator$ = 
+         RGBColor[1, 0, 0], $CellContext`plpts$ = 50, $CellContext`n10min$ = 
+         0.00001, $CellContext`n20min$ = 0.00001, $CellContext`n10max$ = 
+         1.5, $CellContext`n20max$ = 1.5, $CellContext`n10maxfix$ = 
+         1.1, $CellContext`n20maxfix$ = 0.25, $CellContext`vecplts$ = 
+         7}, $CellContext`right1$ = $CellContext`r1$$ \
+$CellContext`n1[$CellContext`t] (
+            1 - $CellContext`n1[$CellContext`t]^$CellContext`theta$$) - \
+($CellContext`c$$ $CellContext`n1[$CellContext`t]/(
+           1 + $CellContext`h$$ $CellContext`c$$ \
+$CellContext`n1[$CellContext`t])) $CellContext`n2[$CellContext`t]; \
+$CellContext`right2$ = $CellContext`n2[$CellContext`t] ($CellContext`r2$$ \
+($CellContext`c$$ $CellContext`n1[$CellContext`t]/(
+             1 + $CellContext`h$$ $CellContext`c$$ \
+$CellContext`n1[$CellContext`t])) - $CellContext`d$$ - $CellContext`g$$ \
+$CellContext`n2[$CellContext`t]); $CellContext`sol$ = Quiet[
+           
+           NDSolve[{
+            Derivative[
+              1][$CellContext`n1][$CellContext`t] == $CellContext`right1$, 
+             Derivative[
+              1][$CellContext`n2][$CellContext`t] == $CellContext`right2$, \
+$CellContext`n1[0] == $CellContext`n10$$, $CellContext`n2[
+              0] == $CellContext`n20$$}, {$CellContext`n1, $CellContext`n2}, \
+{$CellContext`t, 0, $CellContext`tend$$}]]; 
+        If[$CellContext`axes$$, $CellContext`n1max$ = 1.2 Max[
+              Table[
+               Quiet[
+                Extract[
+                 Evaluate[
+                  ReplaceAll[
+                   $CellContext`n1[$CellContext`t], $CellContext`sol$]], 
+                 1]], {$CellContext`t, 
+                0, $CellContext`tend$$, $CellContext`tend$$/(
+                10 $CellContext`plpts$)}]]; $CellContext`n2max$ = 1.2 Max[
+              Table[
+               Quiet[
+                Extract[
+                 Evaluate[
+                  ReplaceAll[
+                   $CellContext`n2[$CellContext`t], $CellContext`sol$]], 
+                 1]], {$CellContext`t, 
+                0, $CellContext`tend$$, $CellContext`tend$$/(
+                10 $CellContext`plpts$)}]]; $CellContext`n1n2max$ = 
+           Max[$CellContext`n1max$, $CellContext`n2max$], $CellContext`n1max$ = \
+$CellContext`n10maxfix$; $CellContext`n2max$ = $CellContext`n20maxfix$; \
+$CellContext`n1n2max$ = $CellContext`n20maxfix$]; $CellContext`gr1$ = 
+         ContourPlot[$CellContext`r1$$ (
+             1 - $CellContext`x^$CellContext`theta$$) == $CellContext`c$$ \
+$CellContext`y/(
+            1 + $CellContext`h$$ $CellContext`c$$ $CellContext`x), \
+{$CellContext`x, 0, $CellContext`n1max$}, {$CellContext`y, 
+            0, $CellContext`n2max$}, ContourStyle -> $CellContext`colorprey$, 
+           PlotPoints -> $CellContext`plpts$]; $CellContext`gr2$ = 
+         ContourPlot[$CellContext`r2$$ ($CellContext`x $CellContext`c$$/(
+              1 + $CellContext`h$$ $CellContext`c$$ $CellContext`x)) - \
+$CellContext`d$$ == $CellContext`g$$ $CellContext`y, {$CellContext`x, 
+            0, $CellContext`n1max$}, {$CellContext`y, 0, $CellContext`n2max$},
+            ContourStyle -> $CellContext`colorpredator$, 
+           PlotPoints -> $CellContext`plpts$]; $CellContext`plot1$ = Plot[{
+            Tooltip[
+             Evaluate[
+              ReplaceAll[
+               $CellContext`n1[$CellContext`t], $CellContext`sol$]], "prey"], 
+            
+            Tooltip[
+             Evaluate[
+              ReplaceAll[
+               $CellContext`n2[$CellContext`t], $CellContext`sol$]], 
+             "predator"]}, {$CellContext`t, 0, $CellContext`tend$$}, 
+           PlotRange -> {{(-0.05) $CellContext`tend$$, $CellContext`tend$$}, \
+{(-0.05) $CellContext`n1n2max$, $CellContext`n1n2max$}}, 
+           AxesOrigin -> {(-0.05) $CellContext`tend$$, (-0.05) \
+$CellContext`n1n2max$}, 
+           PlotStyle -> {$CellContext`colorprey$, \
+$CellContext`colorpredator$}, 
+           AxesLabel -> {
+            "time", Style[$CellContext`pe, $CellContext`colorpredator$] 
+             Style[$CellContext`py, $CellContext`colorprey$]}, 
+           ImageSize -> {230, 230}]; $CellContext`plot2$ = ParametricPlot[{
+            Extract[
+             Evaluate[
+              ReplaceAll[
+               $CellContext`n1[$CellContext`t], $CellContext`sol$]], 1], 
+            Extract[
+             Evaluate[
+              ReplaceAll[
+               $CellContext`n2[$CellContext`t], $CellContext`sol$]], 
+             1]}, {$CellContext`t, 0, $CellContext`tend$$}, 
+           PlotRange -> {{(-0.05) $CellContext`n1max$, $CellContext`n1max$}, \
+{(-0.05) $CellContext`n2max$, $CellContext`n2max$}}, 
+           AxesOrigin -> {(-0.05) $CellContext`n1max$, (-0.05) \
+$CellContext`n2max$}, AxesLabel -> {
+             Style["prey", $CellContext`colorprey$], 
+             Style["predator", $CellContext`colorpredator$]}]; 
+        If[$CellContext`n10$$ < $CellContext`n10min$, $CellContext`n10$$ = \
+$CellContext`n10min$]; 
+        If[$CellContext`n20$$ < $CellContext`n20min$, $CellContext`n20$$ = \
+$CellContext`n20min$]; 
+        If[$CellContext`axes$$, 
+          If[$CellContext`n10$$ > $CellContext`n10max$, $CellContext`n10$$ = \
+$CellContext`n10max$]; 
+          If[$CellContext`n20$$ > $CellContext`n20max$, $CellContext`n20$$ = \
+$CellContext`n20max$], 
+          If[$CellContext`n10$$ > $CellContext`n10maxfix$, $CellContext`n10$$ = \
+$CellContext`n10maxfix$]; 
+          If[$CellContext`n20$$ > $CellContext`n20maxfix$, $CellContext`n20$$ = \
+$CellContext`n20maxfix$]]; $CellContext`startv$ = Graphics[
+           Locator[
+            Dynamic[{$CellContext`n10$$, $CellContext`n20$$}], Background -> 
+            Yellow, LocatorRegion -> Automatic], 
+           PlotRange -> {{$CellContext`n10min$, $CellContext`n10max$}, \
+{$CellContext`n20min$, $CellContext`n20max$}}]; $CellContext`pl3list$ = \
+{$CellContext`plot2$, $CellContext`gr1$, $CellContext`gr2$, \
+$CellContext`startv$}; If[$CellContext`vec$$ != "none", 
+          AppendTo[$CellContext`pl3list$, 
+           
+           VectorPlot[{$CellContext`r1$$ $CellContext`x (
+               1 - $CellContext`x^$CellContext`theta$$) - $CellContext`c$$ \
+$CellContext`y $CellContext`x/(
+             1 + $CellContext`h$$ $CellContext`c$$ $CellContext`x), \
+$CellContext`y ($CellContext`r2$$ ($CellContext`x $CellContext`c$$/(
+                1 + $CellContext`h$$ $CellContext`c$$ $CellContext`x)) - \
+$CellContext`d$$ - $CellContext`g$$ $CellContext`y)}, {$CellContext`x, 
+             0.05 $CellContext`n1max$, 
+             0.95 $CellContext`n1max$}, {$CellContext`y, 
+             0.05 $CellContext`n2max$, 0.95 $CellContext`n2max$}, 
+            VectorPoints -> $CellContext`vecplts$, VectorScale -> 
+            If[$CellContext`vec$$ === "scaled", {Automatic, 
+               Scaled[$CellContext`n1n2max$]}, Medium]]]]; 
+        Grid[{{$CellContext`plot1$, 
+            
+            Show[$CellContext`pl3list$, AspectRatio -> 1, 
+             ImageSize -> {230, 230}]}}]], 
+      "Specifications" :> {{{$CellContext`tend$$, 600, "maximum time"}, 20, 
+         5000, 20, Appearance -> 
+         "Labeled"}, {{$CellContext`r1$$, 0.08, "prey's growth rate"}, -0.01, 
+         3, 0.005, Appearance -> 
+         "Labeled"}, {{$CellContext`theta$$, 1., 
+          "prey's density dependence \[Theta]"}, 0.1, 20., 0.05, Appearance -> 
+         "Labeled"}, {{$CellContext`r2$$, 0.1, "conversion efficiency"}, 0., 
+         1., 0.01, Appearance -> 
+         "Labeled"}, {{$CellContext`c$$, 2.5, "attack rate"}, 0., 10, 0.1, 
+         Appearance -> 
+         "Labeled"}, {{$CellContext`h$$, 0.5, "predator's \"handling\" time"},
+          0., 2.5, 0.025, Appearance -> 
+         "Labeled"}, {{$CellContext`d$$, 0.05, "predator's death rate"}, 0., 
+         0.5, 0.002, Appearance -> 
+         "Labeled"}, {{$CellContext`g$$, 0.07, 
+          "competition between predators"}, 0., 10, 0.002, Appearance -> 
+         "Labeled"}, {{$CellContext`vec$$, "unscaled", 
+          "vectors in phase plot"}, {
+         "unscaled", "scaled", "none"}}, {{$CellContext`axes$$, True, 
+          "automatic scaling of axes"}, {
+         False, True}}, {{$CellContext`n10$$, 0.05}, ControlType -> 
+         None}, {{$CellContext`n20$$, 0.01}, ControlType -> None}}, 
+      "Options" :> {
+       SynchronousUpdating -> False, ControlPlacement -> Top, 
+        AutorunSequencing -> {3, 5, 6, 8}, TrackedSymbols -> True}, 
+      "DefaultOptions" :> {ControllerLinking -> True}],
+     ImageSizeCache->{513., {272., 277.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    Initialization:>(($CellContext`pe = "predator "; $CellContext`py = 
+       "prey"; $CellContext`tendinit = 600; $CellContext`tendmin = 
+       20; $CellContext`tendmax = 5000; $CellContext`deltatend = 
+       20; $CellContext`cinit = 2.5; $CellContext`cmin = 
+       0.; $CellContext`cmax = 10; $CellContext`deltac = 
+       0.1; $CellContext`hinit = 0.5; $CellContext`hmin = 
+       0.; $CellContext`hmax = 2.5; $CellContext`deltah = 
+       0.025; $CellContext`r1init = 
+       0.08; $CellContext`r1min = -0.01; $CellContext`r1max = 
+       3; $CellContext`deltar1 = 0.005; $CellContext`r2init = 
+       0.1; $CellContext`r2min = 0.; $CellContext`r2max = 
+       1.; $CellContext`deltar2 = 0.01; $CellContext`dinit = 
+       0.05; $CellContext`dmin = 0.; $CellContext`dmax = 
+       0.5; $CellContext`deltad = 0.002; $CellContext`ginit = 
+       0.07; $CellContext`gmin = 0.; $CellContext`gmax = 
+       10; $CellContext`deltag = 0.002; $CellContext`thetainit = 
+       1.; $CellContext`thetamin = 0.1; $CellContext`thetamax = 
+       20.; $CellContext`deltatheta = 0.05; Null); Typeset`initDone$$ = True),
+    
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellID->53603850],
+
+Cell[CellGroupData[{
+
+Cell["CAPTION", "Section",
+ CellFrame->{{0, 0}, {1, 0}},
+ CellFrameColor->RGBColor[0.87, 0.87, 0.87],
+ FontFamily->"Helvetica",
+ FontSize->12,
+ FontWeight->"Bold",
+ FontColor->RGBColor[0.597406, 0, 0.0527047]],
+
+Cell["\<\
+Stable predator-prey cycles are predicted by oversimplified \
+Lokta\[Dash]Volterra equations, but if biological realism is added, the \
+dynamics often turn into damped oscillations or even monotonic damping. This \
+Demonstration shows the type-two functional response for the predator and the \
+theta-logistic growth for the prey. Stable limit cycles can occur only if\
+\[LongDash]as a necessary but not sufficient condition\[LongDash]the prey \
+isocline has a (local) maximum and its mode is at higher prey density than \
+its crossing point with the predator isocline. \
+\>", "Text"]
+}, Close]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["DETAILS", "Section",
+ CellFrame->{{0, 0}, {1, 0}},
+ CellFrameColor->RGBColor[0.87, 0.87, 0.87],
+ FontFamily->"Helvetica",
+ FontSize->12,
+ FontWeight->"Bold",
+ FontColor->RGBColor[0.597406, 0, 0.0527047]],
+
+Cell[TextData[{
+ "The dynamics of predator-prey interactions can be predicted from the \
+zero-growth isoclines of predator and prey. These isoclines are shown as red \
+and green lines in the figure on the right. The densities of prey and \
+predator are measured relative to the prey's carrying capacity (i.e., ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"K", "=", "1"}], TraditionalForm]], "InlineMath"],
+ " in the model). The simple model of Lokta and Volterra with its stable \
+limit cycles is approximated by setting \"handling\" time and competition \
+between predators to zero and the prey's density dependence \[Theta] to the \
+maximum (Snapshot 1). Setting ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[Theta]", "=", "1"}], TraditionalForm]], "InlineMath"],
+ " leads to the so-called logistic growth. If such a realistic density \
+dependence (Snapshot 2) is used or competition between predators is added \
+(Snapshots 3 and 4), then the oscillations become damped. A nonzero handling \
+time (Snapshot 5) implies that the consumption rate of the predator depends \
+on the prey density according to Hollings's type-two functional response (see \
+ecology textbooks). This can have a strong stabilizing effect leading to \
+monotonic damping (Snapshot 6). With other parameter settings the crossing \
+point of the isoclines can be shifted to prey values below the mode of the \
+prey isocline (Snapshot 7 with damped oscillation), so that stable limit \
+cycles (Snapshot 8) can occur. "
+}], "Text"],
+
+Cell["Some hints:", "Text"],
+
+Cell["\<\
+Attention! Some parameter combinations might need considerable computing time!\
+\>", "Text"],
+
+Cell["\<\
+The vectors in the phase plane can be removed (\"none\") or reduced in size (\
+\"scaled\").\
+\>", "Text"],
+
+Cell["\<\
+If the automatic scaling of axes is disabled, then axes lengths are fixed to \
+1.1 for the prey and 0.25 for the predator. \
+\>", "Text"],
+
+Cell["\<\
+You can change the starting values for the predator and prey interactively \
+with the yellow locator. Click at the center of the locator and change its \
+position carefully. Minimum starting values are 0.00001 and maximum starting \
+values are 1.5 (or they are equal to the axes lengths if automatic scaling is \
+disabled).\
+\>", "Text"]
+}, Close]],
+
+Cell[CellGroupData[{
+
+Cell["THIS NOTEBOOK IS THE SOURCE CODE FROM", "Text",
+ CellFrame->{{0, 0}, {0, 0}},
+ CellMargins->{{48, 10}, {4, 28}},
+ CellGroupingRules->{"SectionGrouping", 25},
+ CellFrameMargins->{{48, 48}, {6, 5}},
+ CellFrameColor->RGBColor[0.87, 0.87, 0.87],
+ FontFamily->"Helvetica",
+ FontSize->10,
+ FontWeight->"Bold",
+ FontColor->RGBColor[0.597406, 0, 0.0527047]],
+
+Cell[TextData[{
+ "\"",
+ ButtonBox["Predator-Prey Dynamics with Type-Two Functional Response",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://demonstrations.wolfram.com/\
+PredatorPreyDynamicsWithTypeTwoFunctionalResponse/"], None},
+  ButtonNote->
+   "http://demonstrations.wolfram.com/\
+PredatorPreyDynamicsWithTypeTwoFunctionalResponse/"],
+ "\"",
+ " from ",
+ ButtonBox["the Wolfram Demonstrations Project",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://demonstrations.wolfram.com/"], None},
+  ButtonNote->"http://demonstrations.wolfram.com/"],
+ "\[ParagraphSeparator]\[NonBreakingSpace]",
+ ButtonBox["http://demonstrations.wolfram.com/\
+PredatorPreyDynamicsWithTypeTwoFunctionalResponse/",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://demonstrations.wolfram.com/\
+PredatorPreyDynamicsWithTypeTwoFunctionalResponse/"], None},
+  ButtonNote->
+   "http://demonstrations.wolfram.com/\
+PredatorPreyDynamicsWithTypeTwoFunctionalResponse/"]
+}], "Text",
+ CellMargins->{{48, Inherited}, {0, Inherited}},
+ FontFamily->"Verdana",
+ FontSize->10,
+ FontColor->GrayLevel[0.5]],
+
+Cell[TextData[{
+ "Contributed by: ",
+ ButtonBox["Wilfried Gabriel",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://demonstrations.wolfram.com/author.html?author=Wilfried+\
+Gabriel"], None},
+  ButtonNote->
+   "http://demonstrations.wolfram.com/author.html?author=Wilfried+Gabriel"]
+}], "Text",
+ CellDingbat->"\[FilledSmallSquare]",
+ CellMargins->{{66, 48}, {2, 4}},
+ FontFamily->"Verdana",
+ FontSize->10,
+ FontColor->GrayLevel[0.6]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "A full-function Wolfram ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " system (Version 6 or higher) is required to edit this notebook.\n",
+ StyleBox[ButtonBox["GET WOLFRAM MATHEMATICA \[RightGuillemet]",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://www.wolfram.com/products/mathematica/"], None},
+  ButtonNote->"http://www.wolfram.com/products/mathematica/"],
+  FontFamily->"Helvetica",
+  FontWeight->"Bold",
+  FontSlant->"Italic",
+  FontColor->RGBColor[1, 0.42, 0]]
+}], "Text",
+ CellFrame->True,
+ CellMargins->{{48, 68}, {8, 28}},
+ CellFrameMargins->12,
+ CellFrameColor->RGBColor[0.87, 0.87, 0.87],
+ CellChangeTimes->{3.3750111182355957`*^9},
+ ParagraphSpacing->{1., 1.},
+ FontFamily->"Verdana",
+ FontSize->10,
+ FontColor->GrayLevel[0.411765],
+ Background->RGBColor[1, 1, 1]],
+
+Cell[TextData[{
+ "\[Copyright] ",
+ StyleBox[ButtonBox["Wolfram Demonstrations Project & Contributors",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://demonstrations.wolfram.com/"], None},
+  ButtonNote->"http://demonstrations.wolfram.com/"],
+  FontColor->GrayLevel[0.6]],
+ "\[ThickSpace]\[ThickSpace]\[ThickSpace]|\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+ StyleBox[ButtonBox["Terms of Use",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://demonstrations.wolfram.com/termsofuse.html"], None},
+  ButtonNote->"http://demonstrations.wolfram.com/termsofuse.html"],
+  FontColor->GrayLevel[0.6]],
+ "\[ThickSpace]\[ThickSpace]\[ThickSpace]|\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+ StyleBox[ButtonBox["Make a new version of this Demonstration \
+\[RightGuillemet]",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://demonstrations.wolfram.com/participate/upload.jsp?id=\
+PredatorPreyDynamicsWithTypeTwoFunctionalResponse"], None},
+  ButtonNote->None],
+  FontColor->GrayLevel[0.6]]
+}], "Text",
+ CellFrame->{{0, 0}, {0, 0.5}},
+ CellMargins->{{48, 10}, {20, 50}},
+ CellFrameMargins->{{6, 0}, {6, 6}},
+ CellFrameColor->GrayLevel[0.6],
+ FontFamily->"Verdana",
+ FontSize->9,
+ FontColor->GrayLevel[0.6]]
+}, Open  ]]
+}, Open  ]]
+},
+Editable->True,
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+CellInsertionPointCell->None,
+WindowSize->{710, 650},
+WindowMargins->{{Inherited, Inherited}, {Inherited, 0}},
+WindowElements->{
+ "StatusArea", "MemoryMonitor", "MagnificationPopUp", "VerticalScrollBar", 
+  "MenuBar"},
+WindowTitle->"Predator-Prey Dynamics with Type-Two Functional Response - \
+Source",
+DockedCells->{},
+CellContext->Notebook,
+FrontEndVersion->"8.0 for Microsoft Windows (32-bit) (November 7, 2010)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[660, 24, 176, 3, 70, "Section"],
+Cell[839, 29, 3700, 64, 70, "Section"],
+Cell[4542, 95, 50049, 922, 70, "Input",
+ CellID->24463954]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[54628, 1022, 13771, 257, 70, "Output",
+ CellID->53603850],
+Cell[CellGroupData[{
+Cell[68424, 1283, 209, 6, 70, "Section"],
+Cell[68636, 1291, 594, 9, 70, "Text"]
+}, Close]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[69278, 1306, 209, 6, 70, "Section"],
+Cell[69490, 1314, 1492, 25, 70, "Text"],
+Cell[70985, 1341, 27, 0, 70, "Text"],
+Cell[71015, 1343, 102, 2, 70, "Text"],
+Cell[71120, 1347, 115, 3, 70, "Text"],
+Cell[71238, 1352, 147, 3, 70, "Text"],
+Cell[71388, 1357, 347, 6, 70, "Text"]
+}, Close]],
+Cell[CellGroupData[{
+Cell[71771, 1368, 355, 9, 70, "Text",
+ CellGroupingRules->{"SectionGrouping", 25}],
+Cell[72129, 1379, 1096, 31, 70, "Text"],
+Cell[73228, 1412, 442, 14, 70, "Text"],
+Cell[CellGroupData[{
+Cell[73695, 1430, 815, 24, 70, "Text"],
+Cell[74513, 1456, 1221, 33, 70, "Text"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+(* NotebookSignature ZTzYQEfjPx6FkDpqmNXpWHkU *)

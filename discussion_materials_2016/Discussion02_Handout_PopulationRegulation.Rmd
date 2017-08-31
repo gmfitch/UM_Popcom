@@ -1,0 +1,23 @@
+---
+title: "EEB 485: Discussion 02: Population Regulation"
+author: "Drew Larson and Peter Pellitier"
+date: "September 15, 2016"
+output: pdf_document
+---
+
+## McMahon, C. R., M. N. Bester, M. A. Hindell, B. W. Brook, and C. J. A. Bradshaw. 2009. Shifting trends: Detecting environmentally mediated regulation in long-lived marine vertebrates using time-series data. Oecologia 159:69-82.
+
+__Summary:__
+McMahon and colleagues use a multiple model inference approach to determine if populations of southern elephant seals as well as other long lived marine mammal populations are regulated by density dependence. The Marion Island study system allowed the collection of long term direct count data from all breeding females in the population, suggesting that observational error in this data should be minimal.
+
+In order to understand why the population size changed over time, the authors fit the southern elephant seal time series data to multiple models with and without a measure of environmental variation (Southern Oscillation Index).  In order to look for evidence of density dependence, the authors fit their data to a variety of logistic growth models that would provide evidence for density dependence. These population growth models were compared using the Akaike information criterion (AIC) and Bayesian information criterion (BIC) to access which model best described the population data and these models were then used to look for evidence of density dependence. In addition to the Marion Island of elephant seals, the authors analyzed data from 11 other populations of marine mammals in order to look for broader evidence of density dependence in marine mammal populations.
+
+Based on their analyses, the authors conclude that density dependence is an important factor in regulating the population of southern elephant seals as well as most other mammal populations for which long term data was available. Including the Southern Oscillation Index in the model did not improve AIC and BIC scores, suggesting that this measure of environmental variation does little to explain population growth. They conclude that the quality of population data may have an effect on the ability to identify density dependent processes in populations, as they tended to find stronger evidence of density dependence when observation error rates were lower.
+
+__Pre-Discussion Questions:__
+
+1. The authors assert that for the Marion Island system, they modeled the population in a way that would allow them to assess the importance of density regulation and environmental variation.  Do you think the Southern Osculation Index is sufficient as a measure of environmental variation? Why or why not; if not, how could you improve it?
+
+2. What is the purpose of Figure 2? How is this pattern related to the structure of the Gompertz logistic model? (Hint: think back to J. Vandermeer's lecture).
+
+3. How do density dependence, environmental variation, and long term environmental change interact to regulate population size?

@@ -1,0 +1,28 @@
+---
+title: 'EEB 485 Discussion 04: Predator-prey dynamics'
+author: 'Jenny Gu, Christine Lanser, and Sarah Semegen'
+date: "September 29, 2016"
+output: pdf_document
+---
+
+### Yoshida, T., Jones, L.E., Ellner, S.P., Fussmann, G.F., & Harlston Jr., N.G. 2003. Rapid evolution drives ecological dynamics in a predator-prey system. Letters to Nature. 424:303-306.
+
+**Summary:** Yoshida and colleagues argue that rapid evolution can alter traditional predator-prey dynamics. They use a theoretical model to make qualitative predictions of how predator-prey dynamics will be affected, and then experimentally test these predictions. The experimental study focused on predator-prey relationships between rotifers (predator) and algae (prey). Because the algae reproduce asexually the researchers were able to control the genotypes available in each experiment. They manipulated algae to grow either with or without constant and intense predation pressure. Researchers raised algae in varying degrees of predation, and varied using a single clonal species to using multiple clonal species to see how the predator would interact with various genotypes (food value) of algae. Next, they cultivated green algae with and without rotifers under different nutrition conditions.
+
+The researchers found a tradeoff between defense against consumption and competitive ability. Algae under constant and intense predation pressure were smaller and competitively inferior relative to algae grown in the absence of predators, showing the existence of trade off. The results also showed that cycles of green algae with only a single genotype (i.e., no potential for evolution) exhibited 'classic' predator-prey cycles with roughly a quarter-cycle delay between prey and predator maxima while cycles of green algae with multiple genotypes (i.e., with the potential for evolution) led to out-of-phase cycles. The authors concluded that the out of phase cycles were caused by the rapid evolution of prey.
+With rapid evolution driving ecological dynamics in a predator-prey system, Yoshida and colleagues urge ecologist to consider rapid evolution when examining underlying mechanisms of population dynamics and recommend the model-based approach as a useful mechanism to understanding natural population cycles.
+
+**Pre-Discussion Questions:**  
+
+1. How do the results from this study apply to other systems? When might evolution affect predator-prey dynamics and when might they not?
+
+2. What is a half-saturation constant and how to the authors use it to model competitive ability?
+
+3. Could the rotifers be evolving, too? If so, how might that alter their results? When would evolution in predator populations matter? When wouldn't it?
+
+**Additional Questions:**
+1. What do the authors mean by "out of phase" when they refer to the observed predator-prey dynamics?
+
+2. How did the authors control the evolutionary potential of the prey?
+
+

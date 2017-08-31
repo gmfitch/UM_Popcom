@@ -1,0 +1,32 @@
+---
+title: "EEB 485 Discussion 13: Ecosystem function and ecosystem services"
+author: "Peter Pellitier and Melissa Selva"
+date: "December 8, 2016"
+output: pdf_document
+---
+
+## Cardinale, B. J. 2011. Biodiversity improves water quality through niche partitioning. Nature 472:86-89.
+
+__Summary:__
+
+
+Input of nitrogen fertilizers into streams is of significant global concern. Controlling the input, and maximizing the removal of nitrates into streams has significant conservation applications. Increasing the number of niches occupied in a community has been theorized to increase the rate of services provided by an ecosystem. Cardinale (2011) seeks to directly measure the biological mechanisms underpinning why diverse ecosystems tend to more efficiently sequester dissolved nutrients. To achieve this goal, numerous mesocosms were constructed with various niche axes: 1. Rates of water flow across growth surfaces were varied, and 2. Habitat patches were created by random disturbance of a subset of patches on a weekly basis. In doing so, a successional mosaic of patches that varied from 5 to 50 days old, was created. Results show that the rate of nitrate uptake is markedly greater with increasing algal species richness, under niche maintenance conditions. When niche differences were removed, one species outcompeted all others, and the rate of nitrogen uptake was decreased from that of high richness. Figure 2. demonstrates that morphology of algal biomass appears to be a good predictor of the species ability to exist upon substrates experiencing various disturbance regimes and flow velocity, meaning that gross morphology of these algal species may predict niche occupancy. Consistent with ecological theory, when niche differences were eliminated, one species became competitively dominant, and nitrate uptake was decreased under high species richness. In sum, these results suggest that diverse communities of algae remove Nitrate from streams more efficiently than do monocultures, and that this enhanced rate of Nitrate removal is due to a greater proportion of niches being occupied with maximum efficiency. 
+
+__Pre-discussion Questions (Please answer one of these two questions)__
+
+1. Stigeoclonium achieved the highest biomass when it was grown as a monoculture, and also competitively excluded all other species when niche differences were removed. Imagine that all algal species were added on a weekly basis, is it reasonable to expect that Stigeoclonium would dominate? Can diversity and thus, nitrate removal, be maintained with perpetual dispersal. 
+
+2. How do these mesocoms critically differ from real communities? Propose a biological scenario in which Stigeoclonium, would not competitively exclude other species in nature. 
+
+
+## Lefcheck, J. S., J. E. K. Byrnes, F. Isbell, L. Gamfeldt, J. N. Griffin, N. Eisenhauer, M. J. S. Hensel, A. Hector, B. J. Cardinale, and J. E. Duffy. 2015. Biodiversity enhances ecosystem multifunctionality across trophic levels and habitats. Nature Communications 6:6936.
+
+__Summary:__
+
+Lefcheck et al. assembled data from 94 previously published experiments covering a broad range of taxa and ecosystems, and manipulated the richness of 3 or more species in one of five groups: dead organic matter, detritivores, primary producers, herbivores, and carnivores. They then quantified the effect of biodiversity on ecosystem functions, comparing between 2 and 12 functions at one time, by using two complementary approaches. The first approach, the threshold approach, set thresholds based on a percentage of the highest observed mean level of functioning across all treatments in an experiment, and then counted how many functions exceeded each threshold as biodiversity was manipulated. The second approach, the average standardized yield approach, averages the ecosystem function yield across all functions, but its major shortcoming is that is cannot account for tradeoffs between functions, i.e. where two opposing functions are performing at their extremes. Both approaches used generalized linear mixed effects models (GLMMs) to quantify the effects of biodiversity. In almost all cases, biodiversity increased ecosystem multifunctionality, and the effect of biodiversity was strongest for herbivores. Lefcheck et al. suggest that their findings are reliable and can infer a causal relationship because they only considered manipulative experiments. They conclude that biodiversity is possibly more critical than previously considered, and should be conserved should humanity want to preserve the multiple, interacting functions that each unique ecosystems provides.
+
+__Pre-Discussion Questions (Please answer this question):__
+
+Questions:
+
+1. Describe what is happening in figure 2b, and explain why there might be a dip in the performance of ecosystem function around the 0.50 threshold for a high number of functions, but not for low number of functions. 

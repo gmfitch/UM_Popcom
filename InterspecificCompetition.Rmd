@@ -1,0 +1,137 @@
+---
+title: 'EEB 485 Lab: Interspecific competition'
+author: "John Guittar, Pamela Martinez, Doug Jackson, Ed Baskerville, Gyuri Barabas"
+output: pdf_document
+---
+
+#THINGS TO CHANGE: 
+- you may want to switch the Y and X axis labels (N1 and N2) to match lecture/the book
+- make sure you can see the whole manipulate panel for all the interactive things.
+- The multicore package is not necessary
+- Exercise 4 is kind of confusing and I'm not sure what the point of it is.
+
+<br><br>
+*Note:* As always, submit your completed assignment to Canvas before the next lab in R Markdown format (`.Rmd`). Also include the generated HTML file. Your answers should be brief and to the point, but should show that you understand the main concepts.
+<br><br>
+
+## I. Introduction
+
+In this lab we will use the Lotka-Volterra competition equations to explore two-species competition and the influence of competition coefficients on coexistence. As you know from class and the Vandermeer and Goldberg textbook, the equations (4a and 4b, in the book) can be written as:
+
+$$
+\begin{aligned}
+\frac{d N_1}{dt} &= r_1 N_1 \left(
+	\frac{K_1 - N_1 - \alpha_{12} N_2}{K_1}
+\right) \\
+\frac{d N_2}{dt} &= r_2 N_2 \left(
+	\frac{K_2 - N_2 - \alpha_{21} N_1}{K_2}
+\right)
+\end{aligned}
+$$
+
+where the competition coefficient $\alpha_{ij}$ is the effect of species $j$ on species $i$; and $K_i$, $r_i$, and $N_i$ are the carrying capacity, growth rate, and population size, respectively, of species $i$. 
+
+
+### Setting up
+
+First make sure that the `deSolve` R package is installed:
+
+```
+install.packages('deSolve')
+```
+
+Create a working directory for the lab, set it, and download the R source file for the lab  from Canvas (`lab_InterspecificCompetition_code.R`) into this working directory. Load the source file in order to have access to the models we'll be using throughout this lab:
+
+```
+source('lab_InterspecificCompetition_code.R')
+```
+
+The function we'll be using to simulate the Lotka-Volterra competition model comes in two forms: one that gives you interactive controls to change parameter values, and one that produces a single plot with parameters. To start the interactive version, run
+
+```
+lvCompetitionInteractive()
+```
+
+You will see a lot of parameters pop up in the manipulate window - maybe more than can fit on the screen. Don't worry about this. In the exercises, you will fix some parameter values which will reduce the window size, e.g.,
+```
+lvCompetitionInteractive(N1_0 = 100, K1 = 200, r1 = 0.01)
+```
+
+By default, the plot shows the abundance of species 1 and 2 over time. However, you can also draw what's called a "phase diagram" or "phase-space plot" by choosing "Phase Space" from the pop-up menu. Instead of plotting $N_1$ and $N_2$ against $t$, it plots $N_1$ against $N_2$. This "space" that contains the different variables in the system (but not time) is known as as "phase space." The filled circle represents the starting poing ($N_1(0)$ and $N_2(0)$), and the open circle represents the ending point. The plot also shows you the location of the $N_1$ and $N_2$ nullclines, the lines where $dN_1/dt$ and $dN_2/dt$ are zero, respectively. 
+
+Additionally, the plot shows vectors that correspond to the _direction of change_ at different points in the phase diagram: that is, a vector's $x$ component represents $dN_1/dt$, and the vector's $y$ component represents $dN_2/dt$.
+
+As you change the parameter values, the plot will change to match. It will also spit out a line of code that runs the non-interactive function and can be copied-and-pasted into your R Markdown document, e.g.,
+
+```
+lvCompetition(plotStyle="time", N1_0=10, r1=10, K1=10, alpha12=.8,
+	N2_0=10, r2=10, K2=10, alpha21=.9, endTime=5)
+```
+
+<br>
+
+## II. Potential outcomes of two species competition 
+
+### Exercise 1
+
+Using the set of equations described in the class and in the Vandermeer and Goldberg textbook, mathematically describe the conditions under which the following will occur:
+
+* Stable coexistence 
+
+* Unstable coexistance
+
+* Species 1 wins / Species 2 goes extinct
+
+* Species 2 wins / Species 1 goes extinct
+
+Include a brief written description of your results.
+
+Then, run the model with the following parameter values:
+
+```
+lvCompetitionInteractive(N1_0=10, r1=10, N2_0=10, r2=10)
+```
+
+and choose values of $\alpha_{12}$, $\alpha_{21}$, K1 and K2 that demonstrate each scenario. Set the end time of the simulation to visually demonstrate the equilibrium. **Include these plots in your assignment, as well as the plots of the phase space.**
+
+<br>
+
+## III. Time to exclusion
+
+### Exercise 2
+
+Run the model with the following parameter values fixed, but with the these $(\alpha_{12}, \alpha_{21})$ pairs: (0.8, 1.0), (0.8, 1.1), (0.8, 1.5), and (0.8, 3.0): 
+
+  ```lvCompetitionInteractive(N1_0=10, r1=10, K1=200, N2_0=10, r2=10, K2=200)```
+
+What do these results tell you about how the intensity of competition in an unstable system affects the time to exclusion? Include the plots (again, adjust the end time in your plots to visually demonstrate your interpretation).
+
+<br>
+
+### Exercise 3
+
+Think about systems that you might observe that aren't at equilibrium. How might the time to exclusion influence the diversity that you observe in an ecosystem? 
+
+<br>
+
+## IV. Stochasticity
+
+In these exercises, you'll experiment with a version of the model where the growth rates change randomly every 1/100 time units, with a mean and standard deviation that you can change.
+
+Start by running the interactive version of this model with several parameters fixed:
+
+```
+lvCompetitionStochasticInteractive(N1_0=10, K1=200, K2=200,
+	r1Mean=0.1, r2Mean=0.1, alpha12=0.5)
+```
+
+As in previous stochastic exercises, a seed value is printed out as part of the plot-generating line of code, enabling you to repeat simulations exactly.
+
+### Exercise 4
+
+Set the competition coefficient $\alpha_{21}$ to a value that causes species 2 to be excluded when stochasticity is absent. What happens to exclusion time as you increase the standard deviation of the growth rate $r_1$ (i.e. stochasticity)? How consistent is this effect? Make sure to increase stochasticity dramatically...
+
+Although these simulations are based on continuous values for abundance, imagine discrete population sizes were used instead. What would be the effect on coexistence and competitive exclusion?
+
+<br>
+

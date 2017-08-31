@@ -1,0 +1,45 @@
+---
+title: "EEB 485: Week 1: Naturalism and Models"
+author: "John Guittar"
+date: "September 8, 2016"
+output: pdf_document
+---
+
+## Futuyma, D. J. 1998. Wherefore and Whither the Naturalist? *The American Naturalist* 151:1-6.
+
+__Summary:__
+In his 1997 address to the American Society of Naturalists, Douglas Futuyma reflects on the changing cultural landscape in modern ecology and evolutionary biology. He describes an intensifying focus on quantitative rigor and conceptual generalization, driven by an urge to emulate the success of the physical sciences by building up from first principles, and a waning interest in natural history and taxonomy. Futuyma claims that the term "naturalist" is now "undoubtedly pejorative," a label for nature-loving hobbyists with little to offer the broader scientific community. He argues that the disfavor of natural history is resulting in fewer natural history studies published, fewer professors with natural history expertise hired, and the dissolution of departments and museum collections devoted to organismal biology. These institutional changes are in turn discouraging students and advisers from acquiring and fostering natural history expertise. Futuyma defends naturalists by pointing out that many of the most influential ecologists and evolutionary biologists (MacArthur, Mayr, Hutchinson, Rensch) were both scientists and consummate naturalists, and claims that many of their important contributions, including the Evolutionary Synthesis, would have been impossible without insights derived from their expertise in natural history. He concludes by calling for renewed emphasis on the study of natural history.  
+
+__Pre-Discussion Questions:__
+
+* In your experience, what are current attitudes towards natural history in ecology? Do you think these attitudes have changed much since Futuyma's 1998 publication?
+* Futuyma claims that "knowledge of organisms...is equally indispensable for progress in ecology and evolutionary biology"? Do you agree? Is it true that nothing in evolutionary biology makes sense except in the light of natural history?
+
+__More Questions:__
+
+* Seventy-one percent of Futuyma's respondents cited "self-training" as the most important way of learning natural history. Do you think that natural history knowledge should be taught at the institutional level? Do you think it should be required to get a graduate degree in ecology?
+* Futuyma: "...surely the purpose of theories and conceptualizations is not merely to exist in themselves, as monuments to our ingenuity and insight but to organize the myriad details of the natural world as well." Do you agree?
+* Increasingly, technological advancements allow researchers to do many of the same activities that used to require natural history know-how (e.g. genetic barcoding, remote sensing, tracking, dynamic identification guides). Given this, doesn't it make sense that natural history knowledge is less in demand? This is analogous to the idea that we don't have to remember anything anymore because we have Google.
+* Futuyma claims that we can be both naturalists and scientists. Is there not a trade-off?
+* Some might argue that ecology is so context-specific that theory isn't of much use for practical concerns like conservation or agriculture. As Futuyma says, "...conservation efforts absolutely require individuals who really know plants (or birds or mollusks and so forth) -- their taxonomy, habitat requirements, biogeography, patterns of endemism." Why bother with theorists at all?
+
+## Evans *et al*. 2013. Do simple models lead to generality in ecology? *Trends in Ecology and Evolution* 28:578-583.
+
+__Summary:__
+Do simple models lead to generality in ecology? Evans et al. think not, arguing that complex ecological models are often more generally applicable than simple ones. They believe that the widespread misconception "simple is general is good" stems from a fundamental difference in how physical sciences and ecology have developed. In physics, phenomena can be predicted with models derived from a suite of well-understood first principles. Ecologists, on the other hand, are usually interested in understanding the underlying dynamics of complex systems with many known and unknown variables, for which there is no working knowledge of all relevant first principles. Thus, ecologists often build "demonstration" models that describe elements of possible explanations for a given phenomenon. Demonstration models are not meant to be used to test specific predictions in a given system, but rather to outline concepts or reveal underlying mechanisms. Evans *et al*. advocate for the use of "tactical" models when making system-specific predictions. Tactical models incorporate all known relevant processes and can be used to generate simulations to explore system dynamics.
+
+__Pre-Discussion Questions:__
+
+* Evans *et al*. claim that theoretical physics can explain phenomena and devise testable predictions using simple models with few equations, but ecology (usually) cannot. Why not? 
+* Evans *et al*. state that, contrary to popular belief, complex ecological models are actually more general than simple ones (the simple-general trade-off). Based on their reasoning, what is the point of developing simple models, or models of middling complexity? Why not focus exclusively on very complex models that explain the greatest amount of observed variation and generate detailed system-specific predictions?
+
+__More Questions:__
+
+* What is the simplest model you can think of? How general is it? (Define generality. Define simplicity.)
+* What are the drawbacks to a really complex model? e.g. A model of a given plant community, including nutrient flux and demography.
+* Is there a difference between the word 'general' and 'flexible', in terms of model utility?
+* Evans *et al*. do not mention it (for unknown reasons), but statistics has a direct way to measure the presence of the simplicity-fit tandem. It is called out-of-sample prediction performance and it can be calculated by cross validation, or approximated by AIC, BIC, DIC and similar. In short, it measures how well can a model be generalized to data that were not used to fit the model. Do you think these tests can help inform our assessments of model generality?
+
+__Additional Comments:__
+
+* *Make everything as simple as possible, but not simpler* - Albert Einstein.

@@ -1,0 +1,25 @@
+---
+title: "EEB 485 Discussion 11: Field demography and population dynamics"
+author: "Bolivar Aponte-Rolon, Sarah Barney, Andrei Klishin"
+date: "November 17, 2016"
+output: pdf_document
+---
+
+## Shinen, J. L., and S. A. Navarrete. 2014. Lottery Coexistence on Rocky Shores: Weak Niche Differentiation or Equal Competitors Engaged in Neutral Dynamics? The American Naturalist 183:342-362.
+
+__Summary:__
+
+Conflicting thoughts on the mechanisms for coexistence between two Chilean barnacle species, Jehlius cirratus and Notochthamalus scarbosus, exist in the literature. The authors aim to reconcile these contradictions by asking  (a) whether or not the species are truly coexisting and (b) the extent to which niche differences are allowing for coexistence. A series of cohabitating populations of the two barnacle species were experimentally manipulated to exhibit variations in species dominance along the tidal gradient (low to high tide), where they are usually observed with a slight offset in their spatial distribution. The invasibility criterion was then used to test for coexistence (i.e. each species is able to recover after experimental reduction to low-density). Additionally, individual barnacles, either isolated or surrounded by conspecifics or heterospecifics, were followed over time to quantify the effects of intra and inter specific competition on individual growth rate, per capita population growth and per capita mortality rate. Recruitment rates of larval barnacles were also quantified using deposition plates. The authors found the barnacle species to be coexisting per the invasibility criterion, but no fitness differences were found along the tidal gradient, despite the fact that they occupy different strata along the shore. Crowding resulted in increased survival but lower growth rates across treatments and sites but there was no significant difference between intra- and inter-specific crowding. Due to extremely small niche differentiation or unquantifiable fitness differences, the authors conclude that this is evidence for coexistence with neutral dynamics.
+
+
+__Note from John:__ Please come to discussion with a clear and thorough picture of (1) the experiments they conducted, (2) their conceptual reasoning for conducting those experiments, and (3) their results and interpretations. It would be good to compile these points in an informal list, although this is not required.
+
+
+__Pre-Discussion Questions (Please answer the first, and then only one of the next two):__
+
+1. REQUIRED: If there are no fitness differences among species and "recruitment is a 'lottery' process no matter how abundant species might be", then why then is there a gradient of relative abundance across the environmental (tidal) gradient?
+
+2. How do the authors test for functional equivalence between the two barnacle species? How do their results support neutral coexistence?
+
+3. The authors reject the storage hypothesis as a potential stabilizing mechanism of coexistence. What evidence do they cite to justify their reasoning? Do you agree?
+

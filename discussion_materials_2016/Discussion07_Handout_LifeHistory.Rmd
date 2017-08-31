@@ -1,0 +1,38 @@
+---
+title: "EEB 485 Discussion 07: Life History Evolution"
+author: "Katie McLean, Danny Lyons, Christine Lanser"
+date: "October 20, 2016"
+output: pdf_document
+---
+
+## Gremer, J. R., and D. L. Venable. 2014. Bet hedging in desert winter annual plants: Optimal germination strategies in a variable environment. Ecology Letters 17:380-387.
+
+__Summary:__
+
+In variable environments organisms have adapted to minimize risks through bet hedging, reducing short term fitness for reduced variance in fitness over time. Understanding evolutionarily stable strategies (ESS) such as bet hedging has important implications for trait evolution and population and community dynamics. The authors investigated delayed germination as a bet hedging strategy for Sonoran Desert winter annual plants. The environmental stochasticity and density dependence in germination strategies of 12 common species was examined. The authors studied 1) reproduction and germination to assess seeds going into and coming out of seed banks, and 2) temporal seed bank dynamics to understand species abundance in the seed bank. A stochastic simulation model was created to predict ESS germination strategies for each species. The stochastic model, which included simulations of density independence as well as density dependence, was compared to the observed germination fractions.
+ 
+Gremer and Venable described three conditions for delayed germination to fulfill to qualify as an adaptive bet hedging strategy: 1) Delayed germination should increase geometric mean fitness, 2) arithmetic mean fitness should decrease with decreasing germination fractions, and 3) variance in fitness should decrease with decreasing germination fractions. They found all study species to meet these conditions, supporting their hypothesis that delayed germination serves as a bet hedging strategy in this system.  Additionally, the researchers found their density-dependent model more closely fit observed germinations fractions, suggesting the study plants undergo bet hedging to both combat environmental variability as well as create temporal niches to reduce interspecific competition. Finally, Gremer and Venable noted that their hypothesis for bet hedging is further supported by the observation that higher seed survival rates correspond to lower germination fractions, though the result was not statistically significant.
+ 
+Gremer and Venable conclude with a discussion of the implications and weaknesses of their study. They note that they were not able to include predictive germination of seeds n response to environmental cues, which could decrease the value of bet hedging.  They were also unable to include variation in seed dispersal, which could be another strategy for spreading risk--over space instead of time.  They also assumed that germination and seed mortality is independent of seed age (after the first year).  All of these factors may influence the evolution of bet hedging and thus the generalizability of their results.  Finally, they argue that in light of climate change which is expected to bring increased environmental variability , bet hedging, factors affecting bet hedging, and other risk-spreading strategies, are critical areas for further study.
+
+__Pre-Discussion Questions (Please answer two of three):__
+
+1. What is the difference between the arithmetic and geometric mean? Why does bet hedging increase geometric mean but decrease arithmetic mean as compared to non-bet-hedging?
+
+2. Why might you expect to see bet hedging in the environment they studied (Sonoran desert)?  Would you predict bet hedging to occur for all species in all environments?  What are the relevant aspects of a species and it's environment that would lead you to expect bet hedging?
+
+3. Are these species semelparous or iteroparous?  Do you think these species are responding to variability in death rate or variability in birth rate?  Why? Consider that these species are annual and also have bet-hedging.
+
+__Additional Questions (to think about, not respond to in writing):__
+ 
+1. How do the authors integrate environmental stochasticity and density dependence in their model for germination strategies?
+
+2. What if the seeds could to some extent predict a good vs. bad year to germinate; how would this change the applicability of the model?  Any ideas as to how that could be incorporated into the model?
+
+3. What variable in their model did they optimize to find predicted germination fractions?
+
+4. What if the environment was changing directionally (eg getting colder year after year) vs. varying stochastically--would you still expect bet hedging? How does this relate to their argument in the discussion that bet hedging has strong implications for conservation with climate change?
+
+5. Why do they include stochasticisty? How do they incorporate it?
+
+6. What variable in their model did they optimize to find predicted germination fractions?

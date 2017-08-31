@@ -1,0 +1,72 @@
+---
+title: 'EEB 485 Lab: Life History Evolution'
+author: "John Guittar, Ed Baskerville"
+output: pdf_document
+---
+
+In this lab we will investigate the simple life-history evolution model Deborah discussed in class. The model starts with the discrete time exponential model $N_{t+1} = \lambda N_t$ and then breaks up $\lambda$ into survival and reproduction, $\lambda = p + b$. Here $p$ is the probability of survival to the next generation and $b$ is the number of offspring per individual that survive to adulthood. Now we assume that there is a tradeoff between reproduction and survival. To make this tradeoff we consider a variable $E$, which is the reproductive effort; it can take values between 0 (no reproductive effort) and 1 (all resources put to reproductive effort). Now we can picture both $p(E)$ and $b(E)$ as functions of $E$. 
+
+### Exercise 1
+
+We will place the following restrictions on $b$ and $p$:  
+
+* $b(0) = 0$,  
+* $p(1) = 0$,  
+* $p(E) \leq 1$ for all $E$,  
+* $p$ is a decreasing function of $E$ and $b$ is an increasing function $E$.  
+
+* What is the biological relevance of each of these restrictions? Which one or ones imply the tradeoff between reproduction and survival?
+
+### Exercise 2
+
+Our general expectation is that natural selection will have optimized resource allocation such that the fitness is optimal or nearly optimal. Remember: the per-capita growth rate of a population can basically be defined as the average fitness of individuals in the population. We are now interested in finding the value of $E$ that maximizes $\lambda$ for the given functions $p(E)$ and $b(E)$. It is important to understand the inherent assumption in this approach that $E$ is a heritable trait upon which selection can act, taking values between 0 and 1 but otherwise unconstrained by environmental factors or traits. In addition, note that in today's lab, $\lambda$ takes a value from zero to one, and therefore is always negative or neutral. This is ecologically unrealistic, but is sufficient for our purposes because we are interested in how $\lambda$ changes as a function of its reproductive investment, not in its actual value.
+
+As was discussed in class, the functions $b(E)$ and $p(E)$ can take any number of different forms, but we will restrict our attention to the following ones, because they are mathematically simple, yet can give a wide range of behavior:
+
+$$
+\begin{aligned}
+b(E) &= b_{max} E^n 
+\\
+p(E) &= (1 - E)^m
+\end{aligned}
+$$
+
+The parameter $b_{max}$ is the number of offspring surviving to adulthood of an organism devoting all its resources to reproduction. The parameters $n$ and $m$ describe the concavity of the functions. Both can take any positive value, and the overall shape of $b$, $p$ and $\lambda$ are greatly influenced by the choice of these parameters.  
+
+This particular model happens to be simple enough to lend itself to a rather easy analytical solution. We are interested in maximizing $\lambda (E) = b(E) + p(E)$, with $E$ being between 0 and 1. A simulation approach would be to choose a function for $b$ and a function for $p$ and then just try lots of different values of $E$ until we found the greatest $\lambda$. But this would only work for the specific $b$ and $p$ used. If we want a general understanding of the model we must do an analytic approach.  
+
+To find the local extrema of a function, all we need to do is take the derivative and set it equal to zero. In this case, solving for $E$ gives all the local extrema. Then take the second derivative and see if it is positive (local minimum) or negative (local maximum) at each of the local extrema. Since we are on a constrained interval (0 to 1), we then want to compare the values at the maxima to the values
+at the endpoints. 
+
+* Let $n = \frac{1}{2}$, $b_{max} = \frac{3}{2}$ and $m = 1$. What is the predicted reproductive allocation?
+
+### Exercise 3
+
+Assuming the survival function is linear, first assume $n < 1$ and $b_{max} > \frac{1}{n}$, then $n > 1$ and $b_{max} > 1$. In each of these two cases, will the species be semelparous or iteroparous?  
+
+*Hint: Start off by plugging in arbitrary values for $n$ and $b_{max}$ that meet the inequality requirements.*
+
+### Exercise 4
+
+Now we are going to introduce environmental variability into the model. It is much harder to analytically deal with models that have stochasticity in them, so now we will return to simulating the models in R.  In addition, to keep things simple, we will set the mean value of $\lambda$ to one, and the functions $b(E)$ and $p(E)$ to be linear, such that there is no single optimal value of $\lambda$.
+
+Note that if we let $p(E) = 1 - E$ and $b(E) = E$, all values of $E$ give the same value for $\lambda$, since then $\lambda = p(E) + b(E) = 1 - E + E = 1$. So we will take that as our starting place. This way any change in the value of E that predicts the maximum $\lambda$ will come solely from the introduction of stochasticity.  
+
+We will introduce stochasticity into either the birth rate or the survival rate or both. Here are the stochastic versions of $p$ and $b$ ($rnd$ corresponds to a uniformly distributed random number between 0 and 1, i.e. the result of running the command `runif(1)` in the R console):
+
+$$
+\begin{aligned}
+p_m(E) &= (1 - E) \cdot (rnd + 0.5)
+\\
+b_m(E) &= E \cdot (rnd + 0.5)
+\\
+\end{aligned}
+$$
+
+We are introducing stochasticity by multiplying by a random variable with a (arithmetic) mean of 1. Using these stochastic versions of $p$ and $b$, we are interested in what value of $E$ maximizes $\lambda$. Recall the original equation: $N_{t+1} = \lambda N_t$. Now at every time step $\lambda$ is different since it is now a random variable. Thus $N_2 = \lambda_1 N_1$, and $N_3 = \lambda_2 N_2 = \lambda_2 \lambda_1 N_1$, and so on. Since we want to maximize the final population size we need find the value of $E$ that maximizes the product of all the $\lambda$s.
+
+Source the file `lab_lifeHistory_code.R` and execute the function `lambdaInteractive()`. You may need to install the `ggplot2` package. A window should appear showing the _geometric_ mean of $\lambda$ given 1000 generations of population growth along a range of reproductive investment, from 0 to 100 percent, as well as a trendline fit to the scatterplot data using the LOESS method.
+
+* How does introducting stochasticity affect the geometric mean of lambda, given that the arithmatic mean of lambda is always 1. Why?
+* What percentage of reproductive investment $E$ maximizes the product of $\lambda$s when $b(E)$ is stochastic but $p(E)$ is not? What about when $p(E)$ is stochastic and $b(E)$ is not? What about when both exhibit equal degrees of stochasticity?
+* Given the results from the simulation, what types of life history traits are favored in naturally stochastic/non-stochastic systems? How does optimal reproductive investment change as stochasticity is added to birth rate vs. death rate? Do these results help us understand the evolution and/or distribution of life history traits in nature? What are some unrealistic assumptions in this conceptual model of life history?

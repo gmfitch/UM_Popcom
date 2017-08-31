@@ -1,0 +1,82 @@
+---
+title: 'EEB 485 Lab: Metapopulations'
+author: "John Guittar, Pamela Martinez, Doug Jackson, Ed Baskerville, Gyuri Barabas"
+output: pdf_document
+---
+
+## I. Overview
+
+In this lab, you will explore the dynamics of metapopulations. You'll start with Levins' simple one-species metapopulation model, which predicts the consequences of simple extinction-colonization dynamics on patch occupancy. 
+
+Next, you'll look at what happens with addition of a second species in competition with the first, and think about the interplay between space, biological tradeoffs, and coexistence.
+
+
+## II. Simple Metapopulation Model
+
+A metapopulation is composed of *local populations* of some organism. The local populations are located on habitat *patches*, and the patches are separated from one another by a matrix of habitat unsuitable for the organism in question. The two key processes in metapopulation dynamics are *local extinction*, in which a local population goes extinct, and *colonization*, in which colonists, or propagules, from an occupied patch disperse to an unoccupied patch and establish a local population. Frequently, propagules are seeds or juveniles, but in animals, adult immigrants can colonize patches and establish local populations as well.
+
+Richard Levins' model is the simplest model for thinking about metapopulations. It makes three assumptions: 
+
+(1) All patches are alike.
+
+(2) Local population dynamics are very fast, so that patches are either completely empty or fully saturated
+
+(3) Movement between any pair of patches is as frequent as between any other pair. In effect, this last assumption says that the spatial distribution of patches is irrelevant to the dynamics.
+
+Levins' model tracks the fraction $p(t)$ of patches that are occupied at time $t$. Specifically, the above three assumptions lead to the model
+$$
+\frac{dp}{dt} = mp(1 - p) - ep
+$$
+where $m$ is the per-patch colonization rate and $e$ is the per-patch local extinction rate.
+
+
+### Exercise 1
+
+**a.** Explain the form of the model's two terms. Why is the extinction term simply proportional to $p$? Why is the colonization term jointly proportional to both $p$ and $1 - p$? Use a combination of mathematical reasoning and ecology to answer the question.
+
+**b.** Let's explore the behavior of the model. Download `lab_Metapopulations_code.R` from Canvas, open RStudio, and set your working directory to the same location as that file. Type `source('lab_Metapopulations_code.R')` and then execute `dpInteractive()` to view a plot showing $dp/dt$ vs. $p$ from the Levins model. The circles on the graph are equilibrium points. How does the stability of the equilibrium points change as you vary the values for $m$ and $e$? What does this mean for model dynamics? That is, what are the long-term outcomes of this model, and how do they depend on $m$ and $e$?
+
+**c.** Analytically solve for the two equilibria of this system. Show your work.
+
+**d.** What are some environmental (abiotic) factors that could affect the per-patch extinction rate $e$ and the colonization rate $m$? What are some biotic factors?
+
+**e.** The Levins model assumes that $p$ is continuous, i.e., there are an infinite number of colonizable patches, even though this is obviously not the case. How might an altered version of Levins's model with a finite number of patches alter model behavior?  
+
+**f.** Does the Levins model assume that environmental variables (e.g. climate) vary synchronously or asynchronously over the region in which the metapopulation patches are contained? How would synchronous or asynchronous environmental variability affect model predictions of species persistence in a metapopulation?
+
+
+### Exercise 2
+
+We'll use a stochastic simulator to explore the dynamics of metapopulations beyond the predictions of the Levins model. Type `metapopInteractive()` to start the simulator. This simulator runs a stochastic version of the model: extinction rates and colonization rates are translated to probabilities per unit time. To initiate the simulation, first assign your parameter values and then press $run$ at the bottom of the $Manipulate$ panel. Each time you press $run$, $t$ number of time steps will be added to the sequence. To reset the simulation, press $reset$. 
+
+**a.** How does time to regional extinction, or lack thereof, depend on $m$ and $e$? How does time to extinction on the number of patches and initial occupancy? Run several simulations with a range of paramter values to test confirm your hypotheses.
+
+**b.** Is regional extinction inevitable in a stochastic model, given infinite time? 
+
+**c.** Imagine you are an ecologist working to conserve a highly endangered species of *Morpho* butterfly. The butterfly depends on forest vegetation for survival, but deforestation has resulted in a fragmented landscape where a matrix of farmland is dotted with islands of forest. There are 10 patches of forest, only two of which are currently occupied. You have estimated that the local extinction rate is 0.05 patches/year and a low recolonization rate of 0.1 patches/year. Using the simulator, experiment to find a rough estimate of the _probability_ that the population will go extinct within 100 years (i.e. 100 time steps).
+
+**d.** What conservation policies might be available to decrease the probability of regional extinction if migration between patches is impossible?
+
+## III. Competition-Colonization Tradeoff
+
+Now let's add a second, competitively inferior species. We'll represent the fraction occupied by the competitively superior species 1 as $p_1$, and the fraction occupied by the competitively inferior species 2 as $p_2$.
+
+We will continue to assume that dynamics within patches are very fast, so that on the timescale of patch dynamics, a patch cannot be simultaneously occupied by both species:  species 2 will go extinct in the presence of species 1. In other words, patches occupied by species 2 can be colonized by species 1, but not vice versa; and empty patches can be colonized by species 2, but only if they are not colonized by species 1.
+
+### Exercise 3
+
+**a.** Modify the original equation to explore this new two-species system. *Hint: you will want to split the original equation into two equations, one for each of the species. You will want to use the parameters $m_1$, $p_1$, $e_1$, and $m_2$, $p_2$, $e_2$.*
+
+$\frac{dp_1}{dt} =$
+
+$\frac{dp_2}{dt} =$
+
+What do each of the terms in $dp_2/dt$ represent biologically? 
+
+**b.** Analytically solve for the equilibrium patch occupancy fraction $p_1^*$ of species 1?
+
+**c.** Assuming both species have the same extintion probability $e_1 = e_2 = e$, derive conditions for species 2 to coexist with species 1. Explain and show your work.
+
+**d.** Interpret the condition for the persistence of species 2 biologically. What must this mean about the relative advantages of the two species? 
+
+<br>

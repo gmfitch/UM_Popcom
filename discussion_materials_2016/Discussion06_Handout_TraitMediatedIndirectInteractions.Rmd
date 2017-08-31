@@ -1,0 +1,38 @@
+---
+title: "EEB 485 Discussion 06: Trait-Mediated Indirect Effects"
+author: "Molly Choi and Johanna Fornberg"
+date: "October 13, 2016"
+output: pdf_document
+---
+
+## Schmitz, O. J., V. Krivan, and O. Ovadia. 2004. Trophic cascades: the primacy of trait-mediated indirect interactions. Ecology Letters. 7: 153-163.
+
+__Summary:__
+
+Schmitz et al. present a review on empirical evidences of trait-mediated indirect interactions in trophic food webs. They synthesize a collection of experiments and theory which suggest that trait-mediated interactions are an important ultimate mechanism influencing food web dynamics and trophic cascades. They discuss the outcomes of studies which use a variety of techniques to disentangle trait-mediated effects from density-mediated effects of direct (lethal) predation. They also present an overview of important factors related to trophic cascades and trait-mediated effects, including species aggregations, temporal scales, and predator identity. The authors present a hypothesis on the effects of trait-mediated interactions based on findings of the literature analyzed in this paper. They argue that trait-mediated effects ultimately influence trophic (species) cascades via prey antipredator behavior, and that behavioral response of prey to predators is variable based on different hunting strategies and habitat domains of predators. Future research should be focused on quantifying the relative effect and importance of trait-mediated effects on food web interactions and trophic/species cascades. 
+
+__Pre-Discussion Questions:__
+
+1. How are predators and prey able to adjust their interactions in order to gain an advantage over the other? Give specific examples from the reading.
+
+2. Predator identity is mainly defined here by hunting mode and habitat domain. What other functional qualities of a predator could be important in affecting the antipredator response by a prey species?
+
+\newpage
+
+## Trussell, G. C., P. J. Ewanchuk, and M. D. Bertness. 2002. Field evidence of trait-mediated indirect interactions in a rocky intertidal food web. Ecology Letters. 5: 241-245.
+
+__Summary:__
+
+Trussell et al. present an experimental study testing the importance of trait-mediated indirect effects (a.k.a. TMII) in a rocky intertidal system. They propose that TMII have more pronounced effects than previously thought on community structure between the predator and the density of the prey; the green crab (_Carcinus maenas_) and an herbivorous snail (_Littorina littorea_), respectively. Previously, Lubchenco's work on these systems has suggested that density-mediated interactions between the crabs and snails altar the abundance and diversity of algae by changing the foraging behaviors of the snails. 
+
+To assess TMII, the authors constructed two experimental "risk cue" treatments by establishing plots with tiles anchored to the floors of the tidepools and emergent substrata. The treatments assessed fucoid communities in the plots by subjecting them to the presence or absence of snail grazing and green crabs. 
+
+The experimental design allowed the authors to disentangle the non-lethal effect of TMII from the lethal effect of density-mediated interactions. Their results present an interesting insight into the effect of predation on prey behavior, and subsequent trophic cascades and changes in community structure.
+
+__Pre-Discussion Questions:__
+
+1. Explain the "risk-cue" treatments in detail; what are they, how were they designed in this study, and what importance do they serve?
+
+2. In the experiments, how might risk cues be given by the predator, and detected by the prey? Speculate on this while considering the experimental design. Do you think this example applies to other systems?
+
+3. Trussell et al. present evidence for trait-mediated effects in this system, and Lubchenco (1978) showed evidence for density-mediated effects in the same system. Do these two studies contradict or complement each other? How are they reconciled?

@@ -1,0 +1,31 @@
+---
+title: "EEB 485 Discussion 12: Trait-based community assembly"
+author: "Caroline Parins-Fukuchi and Giorgia Auteri "
+date: "December 1, 2016"
+output: pdf_document
+---
+
+## Mayfield, M. M., and J. M. Levine. 2010. Opposing effects of competitive exclusion on the phylogenetic structure of communities. Ecology letters 13:1085-93.
+
+__Summary:__
+
+Mayfield and Levine (2010) use a theoretical framework to examine the competition-relatedness hypothesis. This hypothesis has two key assumptions, that 1) niche space and phylogenetic relationship are correlated and 2) niche differentiation is needed for coexistence. However, previous studies have found mixed support for these assumptions. Traditionally, studies finding poor or even counter support have interpreted their results as meaning that either competition was weak in their system, or traits were poorly conserved through phylogenetic relatedness. In the most extreme cases, phylogenetic clustering is observed, where species in a community are actually more closely related than one would expect by chance. This is often ascribed to a strong effect of environmental filtering, where species persistence is determined by abiotic factors. However, the authors argue that competitive exclusion can also lead to phylogenetic clustering. They present a simple example in which phylogenetic relatedness either corresponds to a gradient of competitive ability, or a gradient in niche differentiation. The former would favor phylogenetic clustering, while the latter would favor over-dispersion. The authors then continue on to discuss what this means for interpreting coexistence in a phylogenetic context.
+
+## Gómez, J. P., G. A. Bravo, R. T. Brumfield, J. G. Tello, and C. D. Cadena. 2010. A phylogenetic approach to disentangling the role of competition and habitat filtering in community assembly of Neotropical forest birds. Journal of Animal Ecology 79:1181-1192.
+
+__Summary:__
+
+
+Gomez and colleagues examined patterns in phylogenetic relatedness and phenotypic similarity among bird species assemblages in the Amazon basin, attempting to distinguish between different processes underlying community assembly. They were particularly interested in determining whether the processes of habitat filtering, wherein species tend to preferentially occupy habitats to which they are adapted, and competitive exclusion, wherein ecologically similar species' coexistence is limited due to competition over resources, may operate simultaneously at different scales. They tested this by estimating the frequency with which evolutionarily and phenotypically close species tend to co-occur. At regional scales, they found that species tend to be phylogenetically even, meaning that closely related species co-occur roughly as, or less, frequently than would be expected by chance. However, at local scales, they found that close relatives tended to cluster together. The phenotypic analyses demonstrated that co-occurring species tended to be more phenotypically similar than expected by chance at regional scales, while at the local scale, species tended to be evenly distributed across phenotypic space. The authors propose that habitat filtering guides assembly formation at regional scales, while competition may be less important than previously thought in shaping species distributions at local scales. 
+
+__Pre-Discussion Questions (Please answer two of the four, and provide a question of your own):__
+
+Combined questions
+
+1. How could competitive exclusion lead to either phylogenetic over-dispersion or clustering?  How could environmental filtering lead to either phylogenetic over-dispersion or clustering?
+
+2. What do "null community" phylogenetic studies assume? Describe, in a broad sense, how these studies are carried out.
+
+3. How would one use patterns in phylogenetic clustering and evenness to distinguish between different processes of community assembly? How do the observed patterns in niche conservatism and phenotypic lability change the final interpretation?
+
+4. Do you think the study by Gomez et al. is a reasonable test of the role of competition in local community assembly? How might the results of this study speak to neutral theory?

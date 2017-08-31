@@ -1,0 +1,20 @@
+---
+title: "EEB 485 Discussion 07: Field demography and population dynamics"
+author: "Tamara Milton and Lijun Zhao"
+date: "November 10, 2016"
+output: pdf_document
+---
+
+## Maron, J. L., C. C. Horvitz, and J. L. Williams. 2010. Using experiments, demography and population models to estimate interaction strength based on transient and asymptotic dynamics. Journal of Ecology 98:290-301.
+
+__Summary:__
+
+Maron et al. used demographic data from two experimental study systems to quantify the strength of plant-herbivore interactions using a newly developed population matrix approach. An overarching goal of this study is to bridge the gap between individual response to herbivores, and the impact on broader population dynamics. The authors look at how the effect of plant-herbivore interactions on population growth might differ between populations in transient and stable states. Populations are in a transient phase before they reach their stable stage distribution, or when the proportion of the population in each stage is still in flux. Most studies estimate the impact of interactions such as herbivory on population growth based on asymptotic growth rates (i.e., dominant eigenvalues), but Maron et al. stress the importance of differentiating between transient and asymptotic impacts given that many populations under studied may not have reached - and may never reach - their stable stage distributions.
+
+Interaction strengths are measured using three metrics: change in per capita annual asymptotic growth rate, change in transient growth rate when herbivory is at its maximum, and average change in growth rate throughout the entire transient phase. This allows for a comparison of how sensitive population growth rate is to change in fecundity caused by herbivory in both the short and long term. The impacts of consumers on growth rate during the transient phase are dynamic, and their impact can be assessed through an elasticity analysis, i.e., by measuring the sensitivity of population dynamics to stage-specific perturbations. They also explore transient elasticity, which changes over time because the dynamics of the population are changing. Transient and asymptotic elasticities can be very different, which is significant in that the measured impact of interactions can either over or understate the effect on population dynamics depending on the demographics and stage of a population. 
+
+__Pre-Discussion Questions (Please answer both):__
+
+1.	Why is it important to differentiate between transient and asymptotic population dynamics? Are there applied situations in which it wouldn't be important?
+
+2.	What do differences in transient and asymptotic elasticity tell us? What do they conclude from their transient and asymptotic elasticity analyses?

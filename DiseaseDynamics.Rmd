@@ -1,0 +1,82 @@
+---
+title: 'EEB 485 Lab: Disease Dynamics'
+author: "John Guittar, Pamela Martinez, Doug Jackson, Ed Baskerville, Gyuri Barabas"
+output: pdf_document
+---
+
+### Overview
+
+As you work through the lab, answer all of the exercises. Submit your completed assignment via Canvas next Thursday in R Markdown format (both `.html` and `.Rmd`). Your answers should be brief and to the point, but should demonstrate your understanding and include parameter values and plots from relevant simulation runs.
+
+Load the source file in order to have access to the models we'll be using throughout this lab:
+
+```
+source('lab_DiseaseDynamics_code.R')
+```
+
+## SIR models without demographics
+
+In the SIR model, individuals are divided into three different categories: individuals susceptible to infection ($S$); individuals that have been infected and are also infectious (capable of infecting others) ($I$); and individuals that have recovered from infection and are immune ($R$). Two processes move individuals from one category to another:
+
+* Infection ($S \rightarrow I$): a susceptible individual becomes infected/infectious
+* Recovery ($I \rightarrow R$): an infected/infectious individual recovers and becomes immune
+
+This scenario is described mathematically using the ordinary differential equations (ODEs) below. In these equations, $\beta$ is the transmission rate (sometimes referred to as the transmission coefficient), and $\nu$ is the rate of recovery from the disease (thus, $\frac{1}{\nu}$ is the duration of the infection). Like in the Vandermeer and Goldberg book, population size is set to 1, so the the values of S, I, and R are effectively the relative population densities, rather than true population numbers. Also note that in this case $\beta$ and $\nu$ do not vary with density; that is, they are frequency dependent rather than density dependent.
+
+$$
+\begin{aligned}
+\frac{dS}{dt} &= -  \beta S I \\
+\\
+\frac{dI}{dt} &= \beta S I - \nu I\\
+\\
+\frac{dR}{dt} &= \nu I \\
+\end{aligned}
+$$
+
+### Exercise 1
+Let us simulate a population that is 99% susceptible and 1% infected, with no recovered individuals. Set the transmissibility value $\beta$ = 1, and the rate of recover from the disease $\nu$ = 0.25 (infection duration = $\frac{1}{\nu}$ = 4 days).
+
+```
+SIR_funct(I0=0.01, nu=(1/4), beta=1, tEnd=35)
+```
+
+* What is the mathematical equation defining the number of susceptible individuals at the peak of the epidemic (i.e. $S_{crit}$)? What is value of $S_{crit}$ equal to in this particular simulation?
+
+* Repeat these simulations with several values of $\beta$ and $\nu$. How do changes in parameter values affect the progression of the epidemic through the population? Include some plots in your explanation.
+
+* As you read in Vandermeer and Goldberg, Chapter 7, the basic reproductive number $R_0$ is equal to $\frac{\beta}{\nu}$. $R_0$ reflects an important property of SIR models. In essense, $R_0$ is the average number of infections each infected individual generates over the course of its infectious period. Why is $R_0$ so important? You may want to refer to the textbook...
+
+### Exercise 2
+
+* The persistence of infections in nature (e.g. malaria, ebola, HIV) appears to invalidate the SIR model, which inevitably results in the eradication of the disease over time (unless the recovery rate is zero, in which case the disease saturates the population). Describe at least two mechanisms that could operate to generate damped oscillations or persistent oscillations of infected numbers like those that we see in many infectious disease systems. 
+
+## SIR models with demographics
+
+One way to add realism to the classical SIR model, especially in terms of its ability to explore long-term dynamics, is to account for births and deaths. If we assume that the birth rate is the same as the death rate, we obtain the following equations:
+
+$$
+\begin{aligned}
+\frac{dS}{dt} &= \mu -  \beta S I - \mu S\\
+\\
+\frac{dI}{dt} &= \beta S I - \nu I - \mu I\\
+\\
+\frac{dR}{dt} &= \nu I -\mu R \\
+\end{aligned}
+$$
+
+Here, $\mu$ represents birth _and_ death rate (birth = $\mu * 1 = \mu$). Note that because we are plotting relative population densities, rather than absolute population numbers, there are two consequences.
+
+### Exercise 3
+
+Run this function, 
+
+```
+SIR_dem_funct(I0=0.01, nu=(1/2), beta=1.5, mu=1/365, tEnd=100)
+```
+In this case the duration of the infection is 2 days and the average lifespan of an individual is 1 year. (Remember, the birth/death rate $\mu$ is the inverse of average lifespan). Modify these parameters such that infection duration is 7 days and lifespan is 30 days.
+
+* What changes do you observe when you run the simulation with these parameters? Pay particular attention to the infected population numbers. Include plots with both the original and modified parameter values in your answer.
+
+* Set $tEnd = 3000$ and re-run the simulation. Explain the results. Are they ecologically realistic? Why or why not?
+
+* Recall the mathematical definition of $R_0 = \frac{\beta}{\nu}$ for the SIR model without demographics, and that $R_0$ is the inverse of $S_{crit}$. Calculate $R_0$ and $S_{crit}$ values for the SIR model with demographics, both in a general mathematical sense and with specific values. 

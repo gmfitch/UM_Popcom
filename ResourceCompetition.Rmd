@@ -1,0 +1,20 @@
+---
+title: 'EEB 485 Lab: Resource competition'
+author: "John Guittar, Pamela Martinez, Doug Jackson, Ed Baskerville, Gyuri Barabas"
+output: pdf_document
+---
+
+## Resource Competition
+
+#### Exercise 1
+
+Consider resource competition for a single resource $R$. Can you make a simple diagram which demonstrates the fact that the species with the lowest $R^*$ wins, while all others go extinct? For this exercise, assume that death rate is density-independent. _Hint: Use Rate versus Resource Availability as your axis labels._
+
+#### Exercise 2
+
+Thus far, we have generally defined species death rates as constant and equal across species in our two-species resource competition models. What happens if death rate differs by species? What repercussions could variation in death rate have on species competition dynamics? Your answer should employ concepts relating to $R^*$ theory.
+
+#### Exercise 3
+
+Let us turn Tilman's model of two species competing for a single resource on its head: let us have two species that are preyed upon by a single predator. Assume that the predator affects the death rates of the two species, and -- for simplicity -- that the birth rates are density-independent (but not necessarily equal between the two prey species). Is there a "$P^*$ rule" analogous to the original $R^*$ rule? State the new rule carefully, and explain how it is similar to, and how it is different from, the original $R^*$ rule. How would you explain this result mathematically.
+

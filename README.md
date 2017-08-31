@@ -1,4 +1,2 @@
-"# UM_Popcom" 
-"# UM_Popcom" 
-"# UM_Popcom" 
-"# UM_Popcom" 
+# UM_PopCom
+University of Michigan Population and Community Ecology Lab Files

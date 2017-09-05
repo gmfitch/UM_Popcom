@@ -1,6 +1,7 @@
 ---
 title: 'EEB 485 Lab: Exponential growth and logistic growth'
-author: "John Guittar, Pamela Martinez, Doug Jackson, Ed Baskerville, Gyuri Barabas"
+author: "Gordon Fitch, John Guittar, Pamela Martinez, Doug Jackson, Ed Baskerville, Gyuri Barabas"
+date: "September 14 2017"
 output: pdf_document
 ---
 
@@ -52,7 +53,7 @@ where $N_t$ is the number of individuals at time $t$. $\lambda$ represents the f
 
 This is a recurrence relation, also called a difference equation, meaning that the value of the equation at any one time is a function of the values at preceding times (in this case it is a function of just the previous time). Recurrence relations are used to model populations in discrete time. Unfortunately, recurrence relations (and differential equations, which we will examine next) are not closed-form equations: if we wanted to know the population size at time 100, we could not just plug the initial population size $N_0$ and $t = 100$ into the equation above and get the answer. We have to start with the initial population size and repeatedly apply the above equation until we obtain the result we are looking for (which is why computers are rather handy in generating these solutions).
 
-Side note: This is a relatively simple recurrence relation that can actually be converted into a closed-form equation mathematically, so we really would not have to use a computer. However, more complicated recurrence relations are simply not expressible in closed form and the only way to understand their behavior is to simulate them using a computer. We will see such an equation later in the lab.
+Side note: This is a relatively simple recurrence relation that *can* actually be converted into a closed-form equation mathematically, so we really would not have to use a computer. However, more complicated recurrence relations are simply not expressible in closed form and the only way to understand their behavior is to simulate them using a computer. We will see such an equation later in the lab.
 
 ### Exploring the model
 
@@ -70,7 +71,7 @@ In addition to the plot, note the image of a gear in the upper-left-hand corner:
 
 This will open up the Manipulate panel, where you can adjust parameter values. If the Manipulate panel isn't already showing, click the gear to bring it up. *Make sure* to expand the size of the plot until you see the entire manipulate panel.
 
-Try changing the value of $\lambda$. Note that when you change a parameter value, a line of code is printed to the console. It is possible to paste that exact line of code into the console to reproduce the same plot (i.e., you don't have to use Manupilate):
+Try changing the value of $\lambda$. Note that when you change a parameter value, a line of code is printed to the console. It is possible to paste that exact line of code into the console to reproduce the same plot (i.e., you don't have to use Manipulate):
 
 ![](images/codegen.png)
 

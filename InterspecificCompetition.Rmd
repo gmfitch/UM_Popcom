@@ -4,12 +4,6 @@ author: "John Guittar, Pamela Martinez, Doug Jackson, Ed Baskerville, Gyuri Bara
 output: pdf_document
 ---
 
-#THINGS TO CHANGE: 
-- you may want to switch the Y and X axis labels (N1 and N2) to match lecture/the book
-- make sure you can see the whole manipulate panel for all the interactive things.
-- The multicore package is not necessary
-- Exercise 4 is kind of confusing and I'm not sure what the point of it is.
-
 <br><br>
 *Note:* As always, submit your completed assignment to Canvas before the next lab in R Markdown format (`.Rmd`). Also include the generated HTML file. Your answers should be brief and to the point, but should show that you understand the main concepts.
 <br><br>

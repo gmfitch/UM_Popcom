@@ -57,9 +57,9 @@ You will see a lot of parameters pop up in the manipulate window - maybe more th
 lvCompetitionInteractive(N1_0 = 100, K1 = 200, r1 = 0.01)
 ```
 
-By default, the plot shows the abundance of species 1 and 2 over time. However, you can also draw what's called a "phase diagram" or "phase-space plot" by choosing "Phase Space" from the pop-up menu. Instead of plotting $N_1$ and $N_2$ against $t$, it plots $N_1$ against $N_2$. This "space" that contains the different variables in the system (but not time) is known as as "phase space." The filled circle represents the starting poing ($N_1(0)$ and $N_2(0)$), and the open circle represents the ending point. The plot also shows you the location of the $N_1$ and $N_2$ nullclines, the lines where $dN_1/dt$ and $dN_2/dt$ are zero, respectively. 
+By default, the plot shows the abundance of species 1 and 2 over time. However, you can also draw what's called a "phase diagram" or "phase-space plot" by choosing "Phase Space" from the pop-up menu. Instead of plotting $N_1$ and $N_2$ against $t$, it plots $N_1$ against $N_2$. This "space" that contains the different variables in the system (but not time) is known as "phase space." The filled circle represents the starting poing ($N_1(0)$ and $N_2(0)$), and the open circle represents the ending point. The plot also shows you the location of the $N_1$ and $N_2$ nullclines, the lines where $dN_1/dt$ and $dN_2/dt$ are zero, respectively. 
 
-Additionally, the plot shows vectors that correspond to the _direction of change_ at different points in the phase diagram: that is, a vector's $x$ component represents $dN_1/dt$, and the vector's $y$ component represents $dN_2/dt$.
+Additionally, the plot shows vectors that correspond to the _direction of change_ at different points in the phase diagram: that is, a vector's $x$ component represents $dN_2/dt$, and the vector's $y$ component represents $dN_1/dt$.
 
 As you change the parameter values, the plot will change to match. It will also spit out a line of code that runs the non-interactive function and can be copied-and-pasted into your R Markdown document, e.g.,
 
@@ -100,7 +100,7 @@ and choose values of $\alpha_{12}$, $\alpha_{21}$, K1 and K2 that demonstrate ea
 
 ### Exercise 2
 
-Run the model with the following parameter values fixed, but with the these $(\alpha_{12}, \alpha_{21})$ pairs: (0.8, 1.0), (0.8, 1.1), (0.8, 1.5), and (0.8, 3.0): 
+Run the model with these $(\alpha_{12}, \alpha_{21})$ pairs: (0.8, 1.0), (0.8, 1.1), (0.8, 1.5), and (0.8, 3.0), but with all other parameter values fixed at the values shown in the code below: 
 
   ```lvCompetitionInteractive(N1_0=10, r1=10, K1=200, N2_0=10, r2=10, K2=200)```
 
@@ -110,7 +110,7 @@ What do these results tell you about how the intensity of competition in an unst
 
 ### Exercise 3
 
-Think about systems that you might observe that aren't at equilibrium. How might the time to exclusion influence the diversity that you observe in an ecosystem? 
+Think about systems that you observe that aren't at equilibrium. How might the time to exclusion influence the diversity that you observe in an such an ecosystem? 
 
 <br>
 
@@ -129,7 +129,7 @@ As in previous stochastic exercises, a seed value is printed out as part of the 
 
 ### Exercise 4
 
-Set the competition coefficient $\alpha_{21}$ to a value that causes species 2 to be excluded when stochasticity is absent. What happens to exclusion time as you increase the standard deviation of the growth rate $r_1$ (i.e. stochasticity)? How consistent is this effect? Make sure to increase stochasticity dramatically...
+Set the competition coefficient $\alpha_{21}$ to a value that causes species 2 to be excluded when stochasticity is absent. What happens to exclusion time as you increase the standard deviation of the growth rate $r_1$ (i.e. stochasticity)? How consistent is this effect? Make sure to increase stochasticity dramatically.
 
 Although these simulations are based on continuous values for abundance, imagine discrete population sizes were used instead. What would be the effect on coexistence and competitive exclusion?
 

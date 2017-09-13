@@ -1,6 +1,6 @@
 ---
 title: 'EEB 485 Lab: Interspecific competition'
-author: "John Guittar, Pamela Martinez, Doug Jackson, Ed Baskerville, Gyuri Barabas"
+author: "Gordon Fitch, John Guittar, Pamela Martinez, Doug Jackson, Ed Baskerville, Gyuri Barabas"
 output: pdf_document
 ---
 

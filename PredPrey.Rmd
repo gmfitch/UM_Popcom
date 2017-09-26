@@ -93,7 +93,7 @@ This type of relationship between victim density and predator feeding rate is kn
 
 **e)** Based on the direction of the arrows, label the equilibrium points as being stable or unstable.
 
-**f)** Explore these dynamics in Mathematica. Which parameters in this model correspond to the following terms in the Mathematica model: a) predator attack rate; b) handling time; c) conversion efficiency? What effect does an increase in each of these parameters have on the dynamics of the model?
+**f)** Explore these dynamics in Mathematica. Which parameters in this model correspond to the following terms in the Mathematica model: i) predator attack rate; ii) handling time; iii) conversion efficiency? What effect does an increase in each of these parameters have on the dynamics of the model?
 
 ## IV. Density-Dependent Prey Growth and Predator Satiation
 
@@ -118,5 +118,7 @@ $$
 **d)** If you keep the parameter values constant and only change the starting point of the population, what happens to the long-term dynamics? How does this compare with the behavior of the basic version of the Lotka-Volterra equations, with no density dependence and no predator satiation? 
 
 **e)** The reading in V&G discussed a "paradox" that involves biological control, in which managers might try to reduce the abundance of a pest species, e.g. the prey in the system, by causing the predator isocline to shift to the left. 
-  a) What would it take, biologically speaking, to shift the predator isocline left or right? 
-  b) Explore with simulations what can happen when the predator isocline is reduced in a system that accounts for density dependence in the prey and handling time for the predator. What qualitatively happens to the dynamics? Why? (Hint: to start, set the prey growth rate to 0.1, conversion efficiency to 0.1, predator handling time to 1, predator death rate to 0.05. Then, start varying the appropriate parameters to change the predator isocline.)
+
+  i) What would it take, biologically speaking, to shift the predator isocline left or right? 
+  
+  ii) Explore with simulations what can happen when the predator isocline is reduced in a system that accounts for density dependence in the prey and handling time for the predator. What qualitatively happens to the dynamics? Why? (Hint: to start, set the prey growth rate to 0.1, conversion efficiency to 0.1, predator handling time to 1, predator death rate to 0.05. Then, start varying the appropriate parameters to change the predator isocline.)

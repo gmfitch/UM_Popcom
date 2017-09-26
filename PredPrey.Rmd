@@ -8,7 +8,7 @@ output: pdf_document
 
 In this lab you will be exploring the Lotka-Volterra predator-prey equations, including biologically more realistic variants that include density-dependent prey growth and predator satiation. You will primarily be analyzing equations by hand today. You will also explore predator prey dynamics using an interactive Mathematica simulation.
 
-For the simulation portions of the lab, you will need access to Mathematica or a freely available program called Wolfram CDF. You have several options: 1) you can use a campus computer with Mathematica already installed. 2) You can login to [Virtual Sites](http://www.itcs.umich.edu/sites/labs/virtual.php) and use a campus computer and Mathematica remotely. 3) You can download and install [Wolfram CDF](https://www.wolfram.com/cdf-player/) on your personal computer (Warning: it is a large file, about 1 GB). Once you have installed the software, download the file `PredPrey.cdf` from the Lab 05: Predator-Prey directory on Canvas, and open it. Note that the interactive Mathematica simulation uses terms rather than explicit parameters (the Parameters are buried within the code). Try to match the terms with the math as we proceed through the lab. (If you are curious about how the simulation works, you can open the source code `PredPrey_source.nb`.)
+For the simulation portions of the lab, you will need access to Mathematica or a freely available program called Wolfram CDF. You have several options: 1) you can use a campus computer with Mathematica already installed. 2) You can login to [Virtual Sites](http://www.itcs.umich.edu/sites/labs/virtual.php) and use a campus computer and Mathematica remotely. 3) You can download and install [Wolfram CDF](https://www.wolfram.com/cdf-player/) on your personal computer (Warning: it is a large file, about 1 GB). Once you have installed the software, download the file `PredPrey_Mathematica.cdf` from the Lab 05: Predator-Prey directory on Canvas, and open it. Note that the interactive Mathematica simulation uses terms rather than explicit parameters (the Parameters are buried within the code). Try to match the terms with the math as we proceed through the lab. (If you are curious about how the simulation works, you can open the source code `PredPrey_Mathematica_sourceCode.nb`.)
 
 ## II. Density-Dependent Prey Growth
 
@@ -93,7 +93,7 @@ This type of relationship between victim density and predator feeding rate is kn
 
 **e)** Based on the direction of the arrows, label the equilibrium points as being stable or unstable.
 
-**f)** Explore these dynamics in Mathematica. Which parameters in this model correspond to the following terms in the Mathematica model: i) predator attack rate; ii) handling time; iii) conversion efficiency? What effect does an increase in each of these parameters have on the dynamics of the model?
+**f)** Explore these dynamics in Mathematica. Which terms in the Mathematica simulation correspond to the following parameters: i) $c$; ii) $g$; iii) $b$ (this last one is a little tricky)? What effect does an increase in each of these parameters have on the dynamics of the model?
 
 ## IV. Density-Dependent Prey Growth and Predator Satiation
 

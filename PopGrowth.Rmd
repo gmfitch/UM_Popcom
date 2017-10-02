@@ -123,7 +123,7 @@ at the R console.
 
 Look at the output of the default model ($r = 0.1$, $N_0 = 10$, final $t = 50$.  Now, try some different parameter values to see how the model behaves, e.g., try $r = 0.2$, or run the model for 200 time units instead of 50. 
 
-* Describe the qualitative difference between the behaviors of exponential growth in continuous versus discrete time.
+* Describe the qualitative difference between the behaviors of exponential growth in continuous versus discrete time (Hint: focus on how time is represented differently in the two models, and how that translates into the graphs).
 
 ### Exercise 3
 
@@ -230,7 +230,7 @@ Compare the plot you generated here to the one without stochasticity for $r_0$ =
 ricker()
 ```
 
-* Imagine that you had collected these two data sets without knowing anything about the underlying systems. Considering the fundamental differences between the models that were used to generate these data, what sort of questions does this raise about prediction in natural systems?
+* Imagine that you had collected these two data sets without knowing anything about the underlying systems. *Qualitatively*, are the dynamics of the two models similar or different? Considering the fundamental differences between the models that were used to generate these data, what does this imply about our ability to infer process from pattern using time series data?
 
 ### Exercise 6
 
@@ -244,12 +244,13 @@ Type the following into the R console to bring up the the logistic equation with
 logisticThreePlotsInteractive()
 ```
 
-Note that the y axes on the bottom two graphs are different from the y axis on the top graph. Consider the following questions:
+Note that the y axes on the bottom two graphs are different from the y axis on the top graph. Answer the following questions:
 
-* What mathematical quantities do the graphs correspond to? (think slopes and derivatives!)
-* How does changing $r$ affect these outputs, and what does this mean in biological terms? 
-* How about changing $K$?
-* What sort of questions might these different representations of the model be used for?
-* Which graph might be of interest if you were harvesting the organism (e.g., if these were fish)? Which representation would be particularly relevant for evolution? 
+a) What mathematical quantities do the graphs correspond to? What does the y-axis represent in each graph?
+b) How does changing $r$ affect these outputs, and what does this mean in biological terms? 
+c) How about changing $K$?
+d) What sort of questions might these different representations of the model be used for?
+e) Which graph might be of interest if you were harvesting the organism (e.g., if these were fish)? 
+f) Which representation would be particularly relevant for evolution? 
 
  
